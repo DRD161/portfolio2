@@ -1,9 +1,16 @@
+// Colors
+$black: #000000;
+$primary-dark: #3e3e3e;
+$primary-blue: #4fd0f4;
+$primary-white: #eeeeee;
+$primary-white-hover: #eeeeeeda;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #3e3e3e;
+  background-color: $primary-dark;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
 }
