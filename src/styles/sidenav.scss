@@ -9,7 +9,7 @@ $primary-white-hover: #eeeeeeda;
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 28px;
+  width: 25px;
   height: 20px;
   left: 36px;
   top: 36px;
@@ -31,22 +31,23 @@ $primary-white-hover: #eeeeeeda;
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 30px !important;
+  width: 30px !important;
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: $primary-white;
+    height: 22px !important;
+  }
 }
 
-/* Color/shape of close button cross */
-.bm-cross {
-  background: $primary-white;
-}
-
-.bm-cross-button.cross-hover:hover span.bm-cross {
+.cross:hover span {
   background: $primary-white-hover;
 }
 
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  left: -15px;
 }
 
 /* General sidebar styles */
@@ -68,6 +69,7 @@ $primary-white-hover: #eeeeeeda;
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
+  height: 50% !important;
 }
 
 /* Individual item */
@@ -91,6 +93,8 @@ $primary-white-hover: #eeeeeeda;
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
 }
 
 .icons-wrapper {
@@ -100,7 +104,7 @@ $primary-white-hover: #eeeeeeda;
   margin: auto;
 }
 
-.social-icons {
+.sidenav-icons {
   color: $primary-white;
   font-size: 2rem;
   &:hover {

@@ -1,19 +1,24 @@
 import React from "react"
 import Layout from "../components/layout"
 // import { Link } from "gatsby"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
+import { IconContext } from "react-icons"
+import SEO from "../components/seo"
+import TopBlob from "../components/TopBlob"
+import BottomBlob from "../components/BottomBlob"
+import HomeTextBack from "../components/HomeTextBack"
+import HomeTextFront from "../components/HomeTextFront"
+import SocialIcons from "../components/SocialIcons"
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> */}
+    <SEO title="Home" />
+    <TopBlob />
+    <HomeTextBack />
+    <HomeTextFront className="foreground-text" />
+    <BottomBlob />
+    <IconContext.Provider value={{ className: "homepage-icons" }}>
+      <SocialIcons />
+    </IconContext.Provider>
   </Layout>
 )
 
