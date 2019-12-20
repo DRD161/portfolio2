@@ -41,22 +41,25 @@ Homepage Styles
   height: 25%;
 }
 
-.background-text {
-  font-size: 12rem;
+.home-header-text {
+  font-size: 10rem;
   text-transform: uppercase;
   color: #eee;
-  opacity: 0.1;
-  width: 60%;
+  width: 65%;
   position: absolute;
-  left: 15%;
-  bottom: 5%;
+  left: 11%;
+  top: 0;
+  margin: auto;
 }
 
-.foreground-text {
-  font-size: 4.5rem;
-  width: 73%;
+.home-sub-text {
+  font-size: 3rem;
+  width: 50%;
   position: absolute;
   color: #eee;
+  right: 0;
+  bottom: 5%;
+  left: 52%;
 }
 
 .homepage-icons {
