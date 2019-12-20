@@ -47,6 +47,7 @@ $primary-white-hover: #eeeeeeda;
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
+  top: 0;
   left: -15px;
 }
 
@@ -101,7 +102,7 @@ $primary-white-hover: #eeeeeeda;
   display: flex !important;
   justify-content: space-evenly;
   width: 80%;
-  margin: auto;
+  margin: 100% auto;
 }
 
 .sidenav-icons {

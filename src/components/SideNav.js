@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import { slide as Menu } from "react-burger-menu"
-import NavSocialIcons from "./NavSocialIcons"
+import SocialIcons from "./SocialIcons"
 
 import "../styles/sidenav.scss"
 
@@ -22,7 +22,7 @@ const SideNav = () => (
         contact
       </Link>
       <div className="sidenav-icons-wrapper">
-        <NavSocialIcons />
+        <SocialIcons />
       </div>
     </Menu>
   </header>
