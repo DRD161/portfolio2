@@ -6,10 +6,14 @@
  */
 
 import React from "react"
-// import PropTypes from "prop-types"
+import SideNav from "./SideNav"
+import Lines from "../components/Lines"
+import Square from "../components/Square"
+import Triangle from "../components/Triangle"
+import HomepageIcons from "./Homepage/HomepageIcons"
+
 import { useStaticQuery, graphql } from "gatsby"
 
-import SideNav from "./SideNav"
 import "../styles/styles.scss"
 
 const Layout = ({ children }) => {
@@ -28,6 +32,10 @@ const Layout = ({ children }) => {
       <SideNav siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
+        <Lines />
+        <Square />
+        <Triangle />
+        <HomepageIcons />
         {/* <footer></footer> */}
       </div>
     </div>

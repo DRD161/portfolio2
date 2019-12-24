@@ -1,8 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
-
+// import { IconContext } from "react-icons"
 import { slide as Menu } from "react-burger-menu"
-import SocialIcons from "./SocialIcons"
+import SideNavIcons from "./SideNavIcons"
 
 import "../styles/sidenav.scss"
 
@@ -22,7 +22,7 @@ const SideNav = () => (
         contact
       </Link>
       <div className="sidenav-icons-wrapper">
-        <SocialIcons />
+        <SideNavIcons />
       </div>
     </Menu>
   </header>

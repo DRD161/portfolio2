@@ -3,8 +3,15 @@
 // Colors
 $black: #000000;
 $primary-blue: #4fd0f4;
+$primary-green: #0deaae;
 $primary-white: #eeeeee;
 $primary-white-hover: #eeeeeeda;
+
+/* View port size variables */
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$large-monitor: 1400px;
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -83,12 +90,12 @@ $primary-white-hover: #eeeeeeda;
   line-height: 60px;
   transition: 0.2s ease-in;
   &:hover {
-    color: $primary-blue;
+    color: $primary-green;
   }
 }
 
 .active {
-  color: $primary-blue;
+  color: $primary-green;
 }
 
 /* Styling of overlay */
@@ -103,12 +110,19 @@ $primary-white-hover: #eeeeeeda;
   justify-content: space-evenly;
   width: 80%;
   margin: 100% auto;
+  @media screen and (max-width: $large-monitor) {
+    margin: 25% auto;
+  }
 }
 
 .sidenav-icons {
   color: $primary-white;
   font-size: 2rem;
+  margin-right: 10px;
+  &:nth-child(3) {
+    margin-right: 0;
+  }
   &:hover {
-    color: $primary-blue;
+    color: $primary-green;
   }
 }
