@@ -4,7 +4,7 @@
 $black: #000000;
 $primary-dark: #333333;
 $primary-blue: #4fd0f4;
-$primary-red: #c15161;
+$primary-red: #d84358;
 $primary-white: #eeeeee;
 $primary-white-hover: #eeeeeeda;
 
@@ -107,16 +107,4 @@ $large-monitor: 1400px;
   background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
-}
-
-.sidenav-icons {
-  color: $primary-white;
-  font-size: 2rem;
-  margin-right: 10px;
-  &:nth-child(3) {
-    margin-right: 0;
-  }
-  &:hover {
-    color: $primary-red;
-  }
 }

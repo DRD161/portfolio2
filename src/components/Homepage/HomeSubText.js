@@ -7,7 +7,7 @@ const SubHeader = styled.p`
   position: absolute;
   color: #eeeeee;
   bottom: 15%;
-  left: 5%;
+  left: 6%;
   z-index: 1;
 `
 

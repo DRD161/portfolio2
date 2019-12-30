@@ -1,24 +1,51 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { MdChevronRight } from "react-icons/md"
 
-const CtaText = styled.h2`
+const CtaButton = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   position: absolute;
-  top: 85%;
-  left: 5%;
-  color: #d84358;
+  bottom: 10%;
+  left: 6%;
+  border: 3px solid #d84358;
+  border-radius: 2px;
   z-index: 1;
+  &:hover i {
+    color: #d84358;
+  }
+  &:hover h2 {
+    color: #d84358;
+  }
   &:hover {
-    color: #eeeeee;
+    border-color: #eeeeee;
   }
 `
 
+const CtaText = styled.h2`
+  color: #eeeeee;
+  margin-bottom: 0;
+  z-index: 1;
+`
+
+const Chevron = styled.i`
+  display: flex;
+  color: #eeeeee;
+  font-size: 2rem;
+  z-index: 1;
+`
+
 const CTA = () => (
-  <div>
-    <Link to="/projects">
+  <Link to="/projects">
+    <CtaButton>
       <CtaText>View my work</CtaText>
-    </Link>
-  </div>
+      <Chevron>
+        <MdChevronRight />
+      </Chevron>
+    </CtaButton>
+  </Link>
 )
 
 export default CTA

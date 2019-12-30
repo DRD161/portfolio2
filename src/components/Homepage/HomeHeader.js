@@ -6,7 +6,7 @@ const HeaderText = styled.h1`
   text-transform: uppercase;
   color: #eeeeee;
   position: absolute;
-  left: 5%;
+  left: 6%;
   top: 25%;
   margin: auto;
   z-index: 1;

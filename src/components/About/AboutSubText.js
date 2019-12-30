@@ -2,21 +2,20 @@ import React from "react"
 import styled from "styled-components"
 
 const SubTextWrapper = styled.section`
-  line-height: 30px;
   width: 50%;
   z-index: 1;
 `
 
 const SubText = styled.p`
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #eeeeee;
 `
 
 const EmailLink = styled.a`
-  color: #c15161;
-  text-decoration: none;
+  color: #eeeeee;
+  font-weight: 700;
   &:hover {
-    color: #eeeeee;
+    color: #d84358;
   }
 `
 

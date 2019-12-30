@@ -1,17 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 
-const HeaderText = styled.p`
+const Header = styled.p`
   font-size: 5rem;
   text-transform: uppercase;
   color: #eeeeee;
   position: absolute;
-  left: 5%;
+  right: 19.5%;
   top: 25%;
   margin: auto;
   z-index: 1;
 `
 
-const AboutHeader = () => <HeaderText>who i am</HeaderText>
+const SkillsHeader = () => <Header>skills:</Header>
 
-export default AboutHeader
+export default SkillsHeader
