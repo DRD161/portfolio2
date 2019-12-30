@@ -2,8 +2,9 @@
 
 // Colors
 $black: #000000;
+$primary-dark: #333333;
 $primary-blue: #4fd0f4;
-$primary-green: #0deaae;
+$primary-red: #c15161;
 $primary-white: #eeeeee;
 $primary-white-hover: #eeeeeeda;
 
@@ -20,6 +21,9 @@ $large-monitor: 1400px;
   height: 20px;
   left: 36px;
   top: 36px;
+  @media screen and (max-width: $tablet) {
+    display: block;
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -60,7 +64,7 @@ $large-monitor: 1400px;
 
 /* General sidebar styles */
 .bm-menu {
-  background: #2e2e2e;
+  background: $primary-dark;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   box-shadow: 3px 5px 10px 2px $black;
@@ -90,12 +94,12 @@ $large-monitor: 1400px;
   line-height: 60px;
   transition: 0.2s ease-in;
   &:hover {
-    color: $primary-green;
+    color: $primary-red;
   }
 }
 
 .active {
-  color: $primary-green;
+  color: $primary-red;
 }
 
 /* Styling of overlay */
@@ -103,16 +107,6 @@ $large-monitor: 1400px;
   background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
-}
-
-.sidenav-icons-wrapper {
-  display: flex !important;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 100% auto;
-  @media screen and (max-width: $large-monitor) {
-    margin: 25% auto;
-  }
 }
 
 .sidenav-icons {
@@ -123,6 +117,6 @@ $large-monitor: 1400px;
     margin-right: 0;
   }
   &:hover {
-    color: $primary-green;
+    color: $primary-red;
   }
 }

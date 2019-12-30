@@ -12,11 +12,6 @@ const HeaderText = styled.h1`
   z-index: 1;
 `
 
-const HomeHeader = () => (
-  <HeaderText>
-    hello.
-    <br /> my name is dylan
-  </HeaderText>
-)
+const AboutHeader = () => <HeaderText>who i am</HeaderText>
 
-export default HomeHeader
+export default AboutHeader

@@ -6,12 +6,9 @@
  */
 
 import React from "react"
-import SideNav from "./SideNav"
+import SideNav from "../components/SideNav"
 import Lines from "../components/Lines"
-import Square from "../components/Square"
-import Triangle from "../components/Triangle"
 import HomepageIcons from "./Homepage/HomepageIcons"
-
 import { useStaticQuery, graphql } from "gatsby"
 
 import "../styles/styles.scss"
@@ -33,8 +30,6 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <Lines />
-        <Square />
-        <Triangle />
         <HomepageIcons />
         {/* <footer></footer> */}
       </div>
