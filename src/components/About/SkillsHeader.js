@@ -6,12 +6,12 @@ const Header = styled.p`
   text-transform: uppercase;
   color: #eeeeee;
   position: absolute;
-  right: 19.5%;
+  right: 22%;
   top: 25%;
   margin: auto;
   z-index: 1;
 `
 
-const SkillsHeader = () => <Header>skills:</Header>
+const SkillsHeader = () => <Header>skills</Header>
 
 export default SkillsHeader

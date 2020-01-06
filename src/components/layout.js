@@ -7,7 +7,7 @@
 
 import React from "react"
 import SideNav from "../components/SideNav"
-import Lines from "../components/Lines"
+// import Lines from "../components/Lines"
 import HomepageIcons from "./Homepage/HomepageIcons"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <SideNav siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
-        <Lines />
+        {/* <Lines /> */}
         <HomepageIcons />
         {/* <footer></footer> */}
       </div>

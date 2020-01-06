@@ -7,8 +7,8 @@ const Line = styled.div`
   bottom: 0;
   width: 1px;
   height: 100%;
-  background-color: #555555;
-  opacity: 0.7;
+  background-color: #eeeeee;
+  opacity: 7%;
   &:nth-child(1) {
     left: 20%;
   }

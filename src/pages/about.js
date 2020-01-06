@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,7 +7,6 @@ import AboutHeader from "../components/About/AboutHeader"
 import AboutSubText from "../components/About/AboutSubText"
 import SkillsHeader from "../components/About/SkillsHeader"
 import Skills from "../components/About/Skills"
-import BgImage from "../components/BgImage"
 
 const AboutTextWrapper = styled.div`
   position: absolute;
@@ -18,7 +16,7 @@ const AboutTextWrapper = styled.div`
   display: flex;
 `
 
-const AboutPage = ({ data }) => (
+const AboutPage = () => (
   <Layout>
     <SEO title="About" description="Dylan's portfolio about page" />
     <AboutHeader />
@@ -27,24 +25,7 @@ const AboutPage = ({ data }) => (
       <AboutSubText />
       <Skills />
     </AboutTextWrapper>
-    <BgImage
-      title="sky"
-      fluid={data.sky.childImageSharp.fluid}
-      overlayColor="rgb(0,0,0, 0.50)"
-    ></BgImage>
   </Layout>
 )
-
-export const query = graphql`
-  query {
-    sky: file(relativePath: { eq: "pink-sky.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default AboutPage

@@ -7,12 +7,8 @@ const CtaButton = styled.div`
   display: flex;
   justify-content: center;
   padding: 10px;
-  position: absolute;
-  bottom: 10%;
-  left: 6%;
   border: 3px solid #d84358;
   border-radius: 2px;
-  z-index: 1;
   &:hover i {
     color: #d84358;
   }
@@ -37,15 +33,20 @@ const Chevron = styled.i`
   z-index: 1;
 `
 
+const StyledLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  width: 15%;
+`
+
 const CTA = () => (
-  <Link to="/projects">
+  <StyledLink to="/projects">
     <CtaButton>
       <CtaText>View my work</CtaText>
       <Chevron>
         <MdChevronRight />
       </Chevron>
     </CtaButton>
-  </Link>
+  </StyledLink>
 )
 
 export default CTA

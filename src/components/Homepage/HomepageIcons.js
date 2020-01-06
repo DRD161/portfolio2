@@ -7,8 +7,9 @@ import { DiGithubAlt } from "react-icons/di"
 const IconWrapper = styled.div`
   position: absolute;
   z-index: 1;
+  width: 120px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   bottom: 0;
   right: 1%;
 `
