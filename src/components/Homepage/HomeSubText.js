@@ -10,10 +10,8 @@ const SubHeader = styled.p`
 
 const HomeSubText = () => (
   <SubHeader>
-    <p>
-      I’m a Front End Developer & UX enthusiast specializing in using JavaScript
-      to create dynamic data driven content for the web.
-    </p>
+    I’m a Front End Developer & UX enthusiast specializing in using JavaScript
+    to create dynamic data driven content for the web.
   </SubHeader>
 )
 

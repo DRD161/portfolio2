@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderText = styled.h1`
-  font-size: 9.5rem;
+  font-size: 9rem;
   text-transform: uppercase;
   color: #eeeeee;
   position: relative;

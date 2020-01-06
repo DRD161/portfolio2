@@ -7,7 +7,7 @@ const Line = styled.div`
   bottom: 0;
   width: 1px;
   height: 100%;
-  background-color: #eeeeee;
+  ${"" /* background-color: #eeeeee; */}
   opacity: 7%;
   &:nth-child(1) {
     left: 20%;
@@ -28,17 +28,31 @@ const Line = styled.div`
     left: 95%;
   }
 `
+const linesArray = [
+  <Line />,
+  <Line />,
+  <Line />,
+  <Line />,
+  <Line />,
+  <Line />,
+  <Line />,
+]
+const createLines = linesArray.map((line, i) => (
+  <div style={{ backgroundColor: "#eeeeee" * i }} key={i}>
+    {line}
+  </div>
+))
 
 const Lines = () => (
   <div>
+    {createLines}
+    {/* <Line />
     <Line />
     <Line />
     <Line />
     <Line />
     <Line />
-    <Line />
-    <Line />
+    <Line /> */}
   </div>
 )
-
 export default Lines
