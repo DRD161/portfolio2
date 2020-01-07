@@ -1,5 +1,5 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
 import { slide as Menu } from "react-burger-menu"
 import SideNavIcons from "./SideNavIcons"
 
@@ -11,9 +11,6 @@ const IconWrapper = styled.div`
   justify-content: space-evenly;
   width: 80%;
   margin: 100% auto;
-  @media screen and (max-width: $large-monitor) {
-    margin: 25% auto;
-  }
 `
 
 const SideNav = () => (
@@ -22,8 +19,8 @@ const SideNav = () => (
       <Link to="/" activeClassName="active">
         home
       </Link>
-      <Link to="/projects" activeClassName="active">
-        projects
+      <Link to="/portfolio" activeClassName="active">
+        portfolio
       </Link>
       <Link to="/about" activeClassName="active">
         about

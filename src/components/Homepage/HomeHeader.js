@@ -2,14 +2,14 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderText = styled.h1`
-  font-size: 9rem;
+  font-size: 10rem;
   text-transform: uppercase;
   color: #eeeeee;
   position: relative;
 `
 
 const RedBar = styled.div`
-  width: 25px;
+  width: 20px;
   background: #d84358;
   position: absolute;
   top: 10.2%;

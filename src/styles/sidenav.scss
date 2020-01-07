@@ -108,3 +108,10 @@ $large-monitor: 1400px;
   top: 0;
   left: 0;
 }
+
+/* Hide on desktop */
+@media screen and (min-width: 769px) {
+  .bm-burger-button {
+    display: none;
+  }
+}

@@ -3,56 +3,41 @@ import styled from "styled-components"
 
 const Line = styled.div`
   position: absolute;
-  left: 5%;
+  left: 2.5%;
   bottom: 0;
   width: 1px;
   height: 100%;
-  ${"" /* background-color: #eeeeee; */}
-  opacity: 7%;
+  background-color: #eeeeee;
+  opacity: 8%;
   &:nth-child(1) {
-    left: 20%;
+    left: 17.5%;
   }
   &:nth-child(2) {
-    left: 35%;
+    left: 32.5%;
   }
   &:nth-child(3) {
-    left: 50%;
+    left: 47.5%;
   }
   &:nth-child(4) {
-    left: 65%;
+    left: 62.5%;
   }
   &:nth-child(5) {
-    left: 80%;
+    left: 77.5%;
   }
   &:nth-child(6) {
-    left: 95%;
+    left: 92.5%;
   }
 `
-const linesArray = [
-  <Line />,
-  <Line />,
-  <Line />,
-  <Line />,
-  <Line />,
-  <Line />,
-  <Line />,
-]
-const createLines = linesArray.map((line, i) => (
-  <div style={{ backgroundColor: "#eeeeee" * i }} key={i}>
-    {line}
-  </div>
-))
 
 const Lines = () => (
   <div>
-    {createLines}
-    {/* <Line />
     <Line />
     <Line />
     <Line />
     <Line />
     <Line />
-    <Line /> */}
+    <Line />
+    <Line />
   </div>
 )
 export default Lines

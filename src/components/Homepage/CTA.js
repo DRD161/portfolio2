@@ -23,14 +23,12 @@ const CtaButton = styled.div`
 const CtaText = styled.h2`
   color: #eeeeee;
   margin-bottom: 0;
-  z-index: 1;
 `
 
 const Chevron = styled.i`
   display: flex;
   color: #eeeeee;
   font-size: 2rem;
-  z-index: 1;
 `
 
 const StyledLink = styled(props => <Link {...props} />)`
