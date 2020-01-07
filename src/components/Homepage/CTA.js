@@ -34,10 +34,13 @@ const Chevron = styled.i`
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   width: 15%;
+  @media screen and (min-width: 1140px) {
+    width: 17%;
+  }
 `
 
 const CTA = () => (
-  <StyledLink to="/projects">
+  <StyledLink to="/portfolio">
     <CtaButton>
       <CtaText>View my work</CtaText>
       <Chevron>

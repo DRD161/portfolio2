@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import Skills from "../About/Skills"
 
 const SubTextWrapper = styled.section`
-  width: 50%;
-  z-index: 1;
+  width: 70%;
 `
 
 const SubText = styled.p`
@@ -12,10 +12,10 @@ const SubText = styled.p`
 `
 
 const EmailLink = styled.a`
-  color: #eeeeee;
+  color: #d84358;
   font-weight: 700;
   &:hover {
-    color: #d84358;
+    color: #eeeeee;
   }
 `
 
@@ -27,9 +27,8 @@ const AboutSubText = () => (
       and JavaScript in order to make the web a better place.
     </SubText>
     <SubText>
-      I try to approach each project from the point of view of the user. This
-      helps me craft a better product that provides a simple yet effective user
-      experience.
+      I’m always open to collaborate with great people and solve unique
+      challenges. If you’re interested
     </SubText>
     <SubText>
       I'm always open to collaborate with great people and solve unique
@@ -38,6 +37,7 @@ const AboutSubText = () => (
         let's get to work!
       </EmailLink>
     </SubText>
+    <Skills />
   </SubTextWrapper>
 )
 

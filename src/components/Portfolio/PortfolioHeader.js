@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const AboutHeaderText = styled.h3`
+const PortfolioHeaderText = styled.h3`
   font-size: 6rem;
   color: #eeeeee;
   position: relative;
@@ -14,15 +14,15 @@ const RedBar = styled.div`
   position: absolute;
   top: 16%;
   right: 100%;
-  height: 70%;
+  height: 88%;
   margin-right: 5px;
 `
 
-const AboutHeader = () => (
-  <AboutHeaderText>
+const PortfolioHeader = () => (
+  <PortfolioHeaderText>
     <RedBar />
-    about
-  </AboutHeaderText>
+    portfolio
+  </PortfolioHeaderText>
 )
 
-export default AboutHeader
+export default PortfolioHeader

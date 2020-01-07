@@ -15,6 +15,9 @@ const HomeWrapper = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
+  @media screen and (min-width: 1200px) {
+    width: 95%;
+  }
 `
 
 const IndexPage = () => (

@@ -11,13 +11,14 @@ const NavWrapper = styled.nav`
 `
 
 const NavItem = styled(props => <Link {...props} />)`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #eeeeee;
   margin: 20px 15px 0 0;
   padding-right: 15px;
   text-decoration: none;
   border-right: 1px solid #eeeeee;
   line-height: 80%;
+  z-index: 1;
   &:nth-child(4) {
     border-right: none;
   }

@@ -29,11 +29,9 @@ const Layout = ({ children }) => {
     <div>
       <SideNav siteTitle={data.site.siteMetadata.title} />
       <DesktopNav siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-        <HomepageIcons />
-        {/* <footer></footer> */}
-      </div>
+      <main>{children}</main>
+      <HomepageIcons />
+      {/* <footer></footer> */}
     </div>
   )
 }
