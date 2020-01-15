@@ -9,7 +9,8 @@ const AboutTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
+  margin: 5% auto 0 auto;
+  width: 80%;
 `
 
 const AboutPage = () => (

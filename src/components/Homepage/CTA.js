@@ -6,13 +6,14 @@ import { MdChevronRight } from "react-icons/md"
 const CtaButton = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 10px;
   border: 3px solid #d84358;
   border-radius: 2px;
   &:hover i {
     color: #d84358;
   }
-  &:hover h2 {
+  &:hover p {
     color: #d84358;
   }
   &:hover {
@@ -20,8 +21,10 @@ const CtaButton = styled.div`
   }
 `
 
-const CtaText = styled.h2`
+const CtaText = styled.p`
   color: #eeeeee;
+  font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 0;
 `
 

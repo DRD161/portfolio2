@@ -6,7 +6,7 @@ const SkillsWrapper = styled.section`
 `
 
 const SkillsHeader = styled.h2`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #eeeeee;
   text-decoration: underline;
   text-decoration-color: #d84358;
