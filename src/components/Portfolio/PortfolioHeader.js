@@ -6,6 +6,7 @@ const PortfolioHeaderText = styled.h3`
   color: #eeeeee;
   position: relative;
   left: 10%;
+  margin-bottom: 5%;
 `
 
 const RedBar = styled.div`

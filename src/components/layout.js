@@ -8,7 +8,6 @@
 import React from "react"
 import DesktopNav from "../components/Nav"
 import SideNav from "../components/SideNav"
-import HomepageIcons from "./Homepage/HomepageIcons"
 
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -30,7 +29,6 @@ const Layout = ({ children }) => {
       <SideNav siteTitle={data.site.siteMetadata.title} />
       <DesktopNav siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <HomepageIcons />
       {/* <footer></footer> */}
     </div>
   )

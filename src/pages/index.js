@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import HomeHeader from "../components/Homepage/HomeHeader"
 import HomeSubText from "../components/Homepage/HomeSubText"
 import CTA from "../components/Homepage/CTA"
+import HomepageIcons from "../components/Homepage/HomepageIcons"
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ const IndexPage = () => (
       <HomeHeader />
       <HomeSubText />
       <CTA />
+      <HomepageIcons />
     </HomeWrapper>
   </Layout>
 )

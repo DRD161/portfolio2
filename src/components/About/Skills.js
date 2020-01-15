@@ -1,9 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
+const SkillsWrapper = styled.section`
+  margin-top: 5%;
+`
+
 const SkillsHeader = styled.h2`
-  font-size: 2rem;
+  font-size: 3rem;
   color: #eeeeee;
+  text-decoration: underline;
+  text-decoration-color: #d84358;
 `
 
 const SkillsList = styled.ul`
@@ -25,7 +31,7 @@ const SkillItem = styled.li`
 `
 
 const Skills = () => (
-  <div>
+  <SkillsWrapper>
     <SkillsHeader>Skills</SkillsHeader>
     <SkillsList>
       <SkillsListHeader>Front end:</SkillsListHeader>
@@ -42,7 +48,7 @@ const Skills = () => (
       <SkillsListHeader>Design:</SkillsListHeader>
       <SkillItem>Adobe XD / Photoshop / Illustrator</SkillItem>
     </SkillsList>
-  </div>
+  </SkillsWrapper>
 )
 
 export default Skills

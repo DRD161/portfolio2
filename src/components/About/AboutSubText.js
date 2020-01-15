@@ -7,7 +7,7 @@ const SubTextWrapper = styled.section`
 `
 
 const SubText = styled.p`
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #eeeeee;
 `
 
