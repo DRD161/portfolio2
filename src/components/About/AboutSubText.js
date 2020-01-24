@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Skills from "../About/Skills"
 
 const SubText = styled.p`
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: #eeeeee;
 `
 
@@ -18,21 +18,24 @@ const EmailLink = styled.a`
 
 export default function AboutSubText() {
   useEffect(() => {
-    const tl = anime
-      .timeline({
-        duration: 1000,
-        easing: "easeInOutBack",
-      })
-      .add({
-        targets: ".about-text",
-        delay: anime.stagger(500),
-        top: ["-20%", 0],
-        opacity: [0, 100],
-      })
+    const tl = anime.timeline({
+      duration: 800,
+      delay: anime.stagger(50),
+      easing: "easeInCubic",
+    })
+    tl.add({
+      targets: ".about-text-wrapper",
+      opacity: [0, 100],
+      delay: 300,
+    }).add({
+      targets: ".about-text",
+      duration: 1000,
+      opacity: [0, 100],
+    })
   })
 
   return (
-    <section className="subtext-wrapper">
+    <section className="about-text-wrapper" id="animate-text">
       <SubText className="about-text">
         Front End Developer, husband, father & coffee lover.
       </SubText>

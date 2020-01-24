@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import anime from "animejs"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { MdChevronRight } from "react-icons/md"
@@ -8,6 +9,7 @@ const CtaButton = styled.div`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  margin-top: 5%;
   border: 3px solid #d84358;
   border-radius: 2px;
   &:hover i {
@@ -42,15 +44,26 @@ const StyledLink = styled(props => <Link {...props} />)`
   }
 `
 
-const CTA = () => (
-  <StyledLink to="/portfolio">
-    <CtaButton>
-      <CtaText>View my work</CtaText>
-      <Chevron>
-        <MdChevronRight />
-      </Chevron>
-    </CtaButton>
-  </StyledLink>
-)
+export default function CTA() {
+  useEffect(() => {
+    anime({
+      targets: ".button",
+      easing: "easeOutCubic",
+      delay: 1500,
+      duration: 1000,
+      opacity: [0, 100],
+      translateX: ["-8%", 0],
+    })
+  })
 
-export default CTA
+  return (
+    <StyledLink to="/portfolio">
+      <CtaButton className="button">
+        <CtaText>View my work</CtaText>
+        <Chevron>
+          <MdChevronRight />
+        </Chevron>
+      </CtaButton>
+    </StyledLink>
+  )
+}

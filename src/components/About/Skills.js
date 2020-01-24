@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import anime from "animejs"
 import styled from "styled-components"
 
 const SkillsWrapper = styled.section`
@@ -30,25 +31,51 @@ const SkillItem = styled.li`
   font-style: italic;
 `
 
-const Skills = () => (
-  <SkillsWrapper>
-    <SkillsHeader>Skills</SkillsHeader>
-    <SkillsList>
-      <SkillsListHeader>Front end:</SkillsListHeader>
-      <SkillItem>
-        Responsive development / JavaScript / ES6 / Vue.js / React.js / SCSS /
-        WordPress
-      </SkillItem>
-    </SkillsList>
-    <SkillsList>
-      <SkillsListHeader>Back end:</SkillsListHeader>
-      <SkillItem>PHP / MySQL</SkillItem>
-    </SkillsList>
-    <SkillsList>
-      <SkillsListHeader>Design:</SkillsListHeader>
-      <SkillItem>Adobe XD / Photoshop / Illustrator</SkillItem>
-    </SkillsList>
-  </SkillsWrapper>
-)
+export default function Skills() {
+  useEffect(() => {
+    const tl = anime.timeline({
+      duration: 800,
+      delay: anime.stagger(50),
+    })
+    tl.add({
+      targets: ".skills-text-wrapper",
+      delay: 600,
+      opacity: [0, 100],
+    }).add({
+      targets: ".skills-text",
+      easing: "easeInCubic",
+      duration: 1000,
+      opacity: [0, 100],
+    })
+  })
 
-export default Skills
+  useEffect(() => {
+    return () => {
+      anime({
+        targets: ".skills-text-wrapper",
+        opacity: [100, 0],
+      })
+    }
+  })
+
+  return (
+    <SkillsWrapper className="skills-text-wrapper">
+      <SkillsHeader className="skills-text">Skills</SkillsHeader>
+      <SkillsList className="skills-text">
+        <SkillsListHeader>Front end:</SkillsListHeader>
+        <SkillItem>
+          Responsive development / JavaScript / ES6 / Vue.js / React.js / SCSS /
+          WordPress
+        </SkillItem>
+      </SkillsList>
+      <SkillsList className="skills-text">
+        <SkillsListHeader>Back end:</SkillsListHeader>
+        <SkillItem>PHP / MySQL</SkillItem>
+      </SkillsList>
+      <SkillsList className="skills-text">
+        <SkillsListHeader>Design:</SkillsListHeader>
+        <SkillItem>Adobe XD / Photoshop / Illustrator</SkillItem>
+      </SkillsList>
+    </SkillsWrapper>
+  )
+}

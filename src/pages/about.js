@@ -9,7 +9,7 @@ const AboutTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5% auto 0 auto;
+  margin: 3% auto 0 auto;
   width: 80%;
 `
 

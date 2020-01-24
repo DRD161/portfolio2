@@ -22,26 +22,22 @@ const RedBar = styled.div`
   height: 70%;
   margin-right: 5px;
 `
-const tl = anime.timeline({
-  easing: "easingExpo",
-  duration: 1000,
-})
 
 export default function AboutHeader() {
   useEffect(() => {
     const tl = anime.timeline({
-      duration: 1000,
-      easing: "easeInOutBack",
+      duration: 500,
+      easing: "easeOutQuad",
     })
     tl.add({
       targets: ".bar",
       opacity: [0, 100],
-      top: ["-20%", "16%"],
+      translateY: ["-25%", 0],
     }).add({
       targets: ".about-header",
       delay: 200,
       opacity: [0, 100],
-      left: ["8.6%", "10%"],
+      translateX: ["-2%", 0],
     })
   })
 

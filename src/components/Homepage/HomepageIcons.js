@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import anime from "animejs"
 import styled from "styled-components"
 
 import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai"
@@ -21,24 +22,41 @@ const HomepageIcon = styled.a`
   }
 `
 
-const HomepageIcons = () => (
-  <IconWrapper>
-    <HomepageIcon
-      href="mailto:dylan@dylandavenport.com"
-      className="homepage-icons"
-    >
-      <AiOutlineMail />
-    </HomepageIcon>
-    <HomepageIcon
-      href="https://www.linkedin.com/in/dylandavenport/"
-      className="homepage-icons"
-    >
-      <AiOutlineLinkedin />
-    </HomepageIcon>
-    <HomepageIcon href="https://github.com/DRD161" className="homepage-icons">
-      <DiGithubAlt />
-    </HomepageIcon>
-  </IconWrapper>
-)
+export default function HomepageIcons() {
+  useEffect(() => {
+    const tl = anime.timeline({
+      duration: 700,
+      delay: anime.stagger(80),
+      easing: "easeInCubic",
+    })
+    tl.add({
+      targets: ".icon-wrapper",
+      delay: 1300,
+      duration: 850,
+      opacity: [0, 100],
+    }).add({
+      targets: ".homepage-icons",
+      opacity: [0, 100],
+    })
+  })
 
-export default HomepageIcons
+  return (
+    <IconWrapper className="icon-wrapper">
+      <HomepageIcon
+        href="mailto:dylan@dylandavenport.com"
+        className="homepage-icons"
+      >
+        <AiOutlineMail />
+      </HomepageIcon>
+      <HomepageIcon
+        href="https://www.linkedin.com/in/dylandavenport/"
+        className="homepage-icons"
+      >
+        <AiOutlineLinkedin />
+      </HomepageIcon>
+      <HomepageIcon href="https://github.com/DRD161" className="homepage-icons">
+        <DiGithubAlt />
+      </HomepageIcon>
+    </IconWrapper>
+  )
+}
