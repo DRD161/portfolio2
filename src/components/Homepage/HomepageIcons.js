@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 
@@ -23,7 +23,7 @@ const HomepageIcon = styled.a`
 `
 
 export default function HomepageIcons() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 700,
       delay: anime.stagger(80),

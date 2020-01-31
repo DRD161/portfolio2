@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -45,7 +45,7 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 export default function CTA() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     anime({
       targets: ".button",
       easing: "easeOutCubic",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 
@@ -24,7 +24,7 @@ const RedBar = styled.div`
 `
 
 export default function AboutHeader() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 500,
       easing: "easeOutQuad",

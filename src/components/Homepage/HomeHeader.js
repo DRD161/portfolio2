@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 
@@ -23,7 +23,7 @@ const RedBar = styled.div`
 `
 
 export default function HomeHeader() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 600,
       easing: "easeOutQuad",
@@ -33,7 +33,7 @@ export default function HomeHeader() {
       opacity: [0, 100],
       translateY: ["-15%", 0],
     }).add({
-      targets: ".test",
+      targets: ".home-header",
       delay: anime.stagger(500),
       opacity: [0, 100],
       translateX: ["-2%", 0],
@@ -43,8 +43,8 @@ export default function HomeHeader() {
   return (
     <Wrapper>
       <RedBar className="bar" />
-      <HomeHeaderText className="home-header test">hello.</HomeHeaderText>
-      <HomeHeaderText className="test">my name is dylan</HomeHeaderText>
+      <HomeHeaderText className="home-header">hello.</HomeHeaderText>
+      <HomeHeaderText className="home-header">my name is dylan</HomeHeaderText>
     </Wrapper>
   )
 }

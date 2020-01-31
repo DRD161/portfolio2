@@ -61,11 +61,6 @@ const SkillsIcon = styled.a`
   }
 `
 
-const GithubLink = styled.p`
-  font-size: 2rem;
-  color: #eeeeee;
-`
-
 const Mockup = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -114,7 +109,7 @@ const Mockup = () => {
     }
   `)
   return (
-    <div>
+    <section>
       <ProjectRight>
         <StyledImg fluid={data.vewsMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
@@ -209,8 +204,7 @@ const Mockup = () => {
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
       </ProjectRight>
-      <GithubLink href="https://github.com/DRD161" />
-    </div>
+    </section>
   )
 }
 export default Mockup

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 
@@ -14,7 +14,7 @@ const SubHeader = styled.p`
 `
 
 export default function HomeSubText() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 800,
       delay: anime.stagger(50),

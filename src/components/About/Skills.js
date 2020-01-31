@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 
@@ -32,7 +32,7 @@ const SkillItem = styled.li`
 `
 
 export default function Skills() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 800,
       delay: anime.stagger(50),
@@ -47,15 +47,6 @@ export default function Skills() {
       duration: 1000,
       opacity: [0, 100],
     })
-  })
-
-  useEffect(() => {
-    return () => {
-      anime({
-        targets: ".skills-text-wrapper",
-        opacity: [100, 0],
-      })
-    }
   })
 
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 import anime from "animejs"
 import styled from "styled-components"
 import Skills from "../About/Skills"
@@ -17,7 +17,7 @@ const EmailLink = styled.a`
 `
 
 export default function AboutSubText() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = anime.timeline({
       duration: 800,
       delay: anime.stagger(50),
