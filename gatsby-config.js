@@ -8,12 +8,8 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
-      },
-    },
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-transitions`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

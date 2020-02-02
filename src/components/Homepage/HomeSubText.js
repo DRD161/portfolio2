@@ -3,7 +3,8 @@ import anime from "animejs"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  width: 70%;
+  grid-column: 3/12;
+  grid-row: 5;
 `
 
 const SubHeader = styled.p`

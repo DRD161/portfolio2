@@ -38,10 +38,8 @@ const Chevron = styled.i`
 
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
-  width: 15%;
-  @media screen and (min-width: 1140px) {
-    width: 17%;
-  }
+  grid-column: 3/6;
+  grid-row: 6;
 `
 
 export default function CTA() {

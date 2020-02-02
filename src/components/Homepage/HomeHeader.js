@@ -3,23 +3,23 @@ import anime from "animejs"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  position: relative;
+  grid-column: 3 / 16;
+  grid-row: 4;
 `
 
 const HomeHeaderText = styled.h1`
   font-size: 9rem;
   text-transform: uppercase;
   color: #eeeeee;
-  position: relative;
 `
 
 const RedBar = styled.div`
   width: 15px;
   background: #d84358;
-  position: absolute;
-  top: 9%;
-  height: 78%;
-  right: 100%;
+  grid-column: 2;
+  grid-row: 4;
+  height: 90%;
+  margin: auto;
 `
 
 export default function HomeHeader() {
@@ -41,10 +41,14 @@ export default function HomeHeader() {
   })
 
   return (
-    <Wrapper>
+    <>
+      <Wrapper>
+        <HomeHeaderText className="home-header">hello.</HomeHeaderText>
+        <HomeHeaderText className="home-header">
+          my name is dylan
+        </HomeHeaderText>
+      </Wrapper>
       <RedBar className="bar" />
-      <HomeHeaderText className="home-header">hello.</HomeHeaderText>
-      <HomeHeaderText className="home-header">my name is dylan</HomeHeaderText>
-    </Wrapper>
+    </>
   )
 }

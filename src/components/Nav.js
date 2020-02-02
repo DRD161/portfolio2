@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 const NavWrapper = styled.nav`
   display: flex;
   justify-content: flex-end;
+  z-index: 99;
   @media screen and (max-width: 769px) {
     display: none;
   }
@@ -22,21 +23,19 @@ const NavItem = styled(props => <Link {...props} />)`
   }
 `
 
-const DesktopNav = () => (
-  <NavWrapper>
-    <NavItem to="/" activeClassName="active">
-      home
-    </NavItem>
-    <NavItem to="/portfolio" activeClassName="active">
-      portfolio
-    </NavItem>
-    <NavItem to="/about" activeClassName="active">
-      about
-    </NavItem>
-    <NavItem to="/contact" activeClassName="active">
-      contact
-    </NavItem>
-  </NavWrapper>
-)
-
-export default DesktopNav
+export default function Nav() {
+  return (
+    <NavWrapper>
+      <NavItem to="/">home</NavItem>
+      <NavItem to="/portfolio" activeClassName="active">
+        portfolio
+      </NavItem>
+      <NavItem to="/about" activeClassName="active">
+        about
+      </NavItem>
+      <NavItem to="/contact" activeClassName="active">
+        contact
+      </NavItem>
+    </NavWrapper>
+  )
+}

@@ -9,16 +9,9 @@ import CTA from "../components/Homepage/CTA"
 import HomepageIcons from "../components/Homepage/HomepageIcons"
 
 const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  @media screen and (min-width: 1200px) {
-    width: 95%;
-  }
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(8, 0.15fr);
 `
 
 const IndexPage = () => (
