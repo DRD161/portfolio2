@@ -8,7 +8,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

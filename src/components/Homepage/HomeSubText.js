@@ -1,5 +1,6 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
+import { animated, config } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -7,7 +8,7 @@ const Wrapper = styled.div`
   grid-row: 5;
 `
 
-const SubHeader = styled.p`
+const SubHeader = styled(animated.p)`
   font-size: 1.7rem;
   color: #959595;
   font-style: italic;
@@ -15,32 +16,39 @@ const SubHeader = styled.p`
 `
 
 export default function HomeSubText() {
-  useLayoutEffect(() => {
-    const tl = anime.timeline({
-      duration: 800,
-      delay: anime.stagger(50),
-    })
-    tl.add({
-      targets: ".home-text-wrapper",
-      opacity: [0, 100],
-      delay: 700,
-    }).add({
-      targets: ".home-subtext",
-      duration: 1000,
-      easing: "easeInCubic",
-      opacity: [0, 100],
-    })
-  })
-
   return (
     <Wrapper className="home-text-wrapper">
-      <SubHeader className="home-subtext">
-        I’m a Front End Developer & UX enthusiast specializing in using
-        JavaScript
-      </SubHeader>
-      <SubHeader className="home-subtext">
-        to create dynamic data driven content for the web.
-      </SubHeader>
+      <Spring
+        from={{
+          opacity: 0,
+        }}
+        to={{
+          opacity: 1,
+        }}
+        config={{ delay: 1600 }}
+      >
+        {props => (
+          <SubHeader className="home-subtext" style={props}>
+            I’m a Front End Developer & UX enthusiast specializing in using
+            JavaScript
+          </SubHeader>
+        )}
+      </Spring>
+      <Spring
+        from={{
+          opacity: 0,
+        }}
+        to={{
+          opacity: 1,
+        }}
+        config={{ delay: 1650 }}
+      >
+        {props => (
+          <SubHeader className="home-subtext" style={props}>
+            to create dynamic data driven content for the web.
+          </SubHeader>
+        )}
+      </Spring>
     </Wrapper>
   )
 }

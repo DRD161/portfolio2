@@ -1,10 +1,11 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
+import { animated, config } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { MdChevronRight } from "react-icons/md"
 
-const CtaButton = styled.div`
+const CtaButton = styled(animated.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,25 +44,28 @@ const StyledLink = styled(props => <Link {...props} />)`
 `
 
 export default function CTA() {
-  useLayoutEffect(() => {
-    anime({
-      targets: ".button",
-      easing: "easeOutCubic",
-      delay: 1500,
-      duration: 1000,
-      opacity: [0, 100],
-      translateX: ["-8%", 0],
-    })
-  })
-
   return (
     <StyledLink to="/portfolio">
-      <CtaButton className="button">
-        <CtaText>View my work</CtaText>
-        <Chevron>
-          <MdChevronRight />
-        </Chevron>
-      </CtaButton>
+      <Spring
+        from={{
+          opacity: 0,
+          transform: "translate3d(-8%, 0, 0)",
+        }}
+        to={{
+          opacity: 1,
+          transform: "translate3d(0, 0, 0)",
+        }}
+        config={{ delay: 1500, friction: 50 }}
+      >
+        {props => (
+          <CtaButton className="button" style={props}>
+            <CtaText>View my work</CtaText>
+            <Chevron>
+              <MdChevronRight />
+            </Chevron>
+          </CtaButton>
+        )}
+      </Spring>
     </StyledLink>
   )
 }

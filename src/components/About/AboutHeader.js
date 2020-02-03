@@ -1,19 +1,20 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
+import { animated, config } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
   position: relative;
 `
 
-const AboutHeaderText = styled.h3`
+const AboutHeaderText = styled(animated.h3)`
   font-size: 6rem;
   color: #eeeeee;
   position: relative;
   left: 10%;
 `
 
-const RedBar = styled.div`
+const RedBar = styled(animated.div)`
   width: 15px;
   background: #d84358;
   position: absolute;
@@ -24,27 +25,26 @@ const RedBar = styled.div`
 `
 
 export default function AboutHeader() {
-  useLayoutEffect(() => {
-    const tl = anime.timeline({
-      duration: 500,
-      easing: "easeOutQuad",
-    })
-    tl.add({
-      targets: ".bar",
-      opacity: [0, 100],
-      translateY: ["-25%", 0],
-    }).add({
-      targets: ".about-header",
-      delay: 200,
-      opacity: [0, 100],
-      translateX: ["-2%", 0],
-    })
-  })
-
   return (
     <Wrapper>
-      <RedBar className="bar" />
-      <AboutHeaderText className="about-header">about</AboutHeaderText>
+      <Spring
+        from={{ opacity: 0, transform: "translate3d(0,-40%, 0)" }}
+        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+        config={{ delay: 400 }}
+      >
+        {props => <RedBar className="bar" style={props} />}
+      </Spring>
+      <Spring
+        from={{ opacity: 0, transform: "translate3d(-2%, 0, 0)" }}
+        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+        config={{ delay: 800 }}
+      >
+        {props => (
+          <AboutHeaderText className="about-header" style={props}>
+            about
+          </AboutHeaderText>
+        )}
+      </Spring>
     </Wrapper>
   )
 }

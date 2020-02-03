@@ -1,5 +1,6 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
+import { animated, config } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai"
@@ -13,7 +14,7 @@ const IconWrapper = styled.div`
   grid-row: 8;
 `
 
-const HomepageIcon = styled.a`
+const HomepageIcon = styled(animated.a)`
   color: #eeeeee;
   font-size: 2rem;
   &:hover {
@@ -22,40 +23,71 @@ const HomepageIcon = styled.a`
 `
 
 export default function HomepageIcons() {
-  useLayoutEffect(() => {
-    const tl = anime.timeline({
-      duration: 700,
-      delay: anime.stagger(80),
-      easing: "easeInCubic",
-    })
-    tl.add({
-      targets: ".icon-wrapper",
-      delay: 1300,
-      duration: 850,
-      opacity: [0, 100],
-    }).add({
-      targets: ".homepage-icons",
-      opacity: [0, 100],
-    })
-  })
-
   return (
     <IconWrapper className="icon-wrapper">
-      <HomepageIcon
-        href="mailto:dylan@dylandavenport.com"
-        className="homepage-icons"
+      <Spring
+        from={{
+          opacity: 0,
+          transform: "translate3d(-5%, 0, 0)",
+        }}
+        to={{
+          opacity: 1,
+          transform: "translate3d(0, 0, 0)",
+        }}
+        config={{ delay: 1600, friction: 50 }}
       >
-        <AiOutlineMail />
-      </HomepageIcon>
-      <HomepageIcon
-        href="https://www.linkedin.com/in/dylandavenport/"
-        className="homepage-icons"
+        {props => (
+          <HomepageIcon
+            href="mailto:dylan@dylandavenport.com"
+            className="homepage-icons"
+            style={props}
+          >
+            <AiOutlineMail />
+          </HomepageIcon>
+        )}
+      </Spring>
+      <Spring
+        from={{
+          opacity: 0,
+          transform: "translate3d(-5%, 0, 0)",
+        }}
+        to={{
+          opacity: 1,
+          transform: "translate3d(0, 0, 0)",
+        }}
+        config={{ delay: 1700, friction: 50 }}
       >
-        <AiOutlineLinkedin />
-      </HomepageIcon>
-      <HomepageIcon href="https://github.com/DRD161" className="homepage-icons">
-        <DiGithubAlt />
-      </HomepageIcon>
+        {props => (
+          <HomepageIcon
+            href="https://www.linkedin.com/in/dylandavenport/"
+            className="homepage-icons"
+            style={props}
+          >
+            <AiOutlineLinkedin />
+          </HomepageIcon>
+        )}
+      </Spring>
+      <Spring
+        from={{
+          opacity: 0,
+          transform: "translate3d(-5%, 0, 0)",
+        }}
+        to={{
+          opacity: 1,
+          transform: "translate3d(0, 0, 0)",
+        }}
+        config={{ delay: 1800, friction: 50 }}
+      >
+        {props => (
+          <HomepageIcon
+            href="https://github.com/DRD161"
+            className="homepage-icons"
+            style={props}
+          >
+            <DiGithubAlt />
+          </HomepageIcon>
+        )}
+      </Spring>
     </IconWrapper>
   )
 }

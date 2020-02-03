@@ -1,5 +1,6 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
+import { animated, config } from "react-spring"
+import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
@@ -7,13 +8,13 @@ const Wrapper = styled.div`
   grid-row: 4;
 `
 
-const HomeHeaderText = styled.h1`
+const HomeHeaderText = styled(animated.h1)`
   font-size: 9rem;
   text-transform: uppercase;
   color: #eeeeee;
 `
 
-const RedBar = styled.div`
+const RedBar = styled(animated.div)`
   width: 15px;
   background: #d84358;
   grid-column: 2;
@@ -23,32 +24,45 @@ const RedBar = styled.div`
 `
 
 export default function HomeHeader() {
-  useLayoutEffect(() => {
-    const tl = anime.timeline({
-      duration: 600,
-      easing: "easeOutQuad",
-    })
-    tl.add({
-      targets: ".bar",
-      opacity: [0, 100],
-      translateY: ["-15%", 0],
-    }).add({
-      targets: ".home-header",
-      delay: anime.stagger(500),
-      opacity: [0, 100],
-      translateX: ["-5%", 0],
-    })
-  })
-
   return (
     <>
       <Wrapper>
-        <HomeHeaderText className="home-header">hello.</HomeHeaderText>
-        <HomeHeaderText className="home-header">
-          my name is dylan
-        </HomeHeaderText>
+        <Spring
+          from={{
+            opacity: 0,
+            transform: "translate3d(-5%, 0, 0)",
+          }}
+          to={{
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+          }}
+          config={{ delay: 1000, friction: 50 }}
+        >
+          {props => (
+            <HomeHeaderText style={props} className="home-header">
+              hello.
+            </HomeHeaderText>
+          )}
+        </Spring>
+        <Spring
+          from={{ opacity: 0, transform: "translate3d(-5%, 0, 0)" }}
+          to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+          config={{ delay: 1100, friction: 50 }}
+        >
+          {props => (
+            <HomeHeaderText style={props} className="home-header">
+              my name is dylan
+            </HomeHeaderText>
+          )}
+        </Spring>
       </Wrapper>
-      <RedBar className="bar" />
+      <Spring
+        from={{ opacity: 0, transform: "translate3d(0,-40%, 0)" }}
+        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+        config={{ friction: 50 }}
+      >
+        {props => <RedBar className="bar" style={props} />}
+      </Spring>
     </>
   )
 }
