@@ -6,6 +6,8 @@
  */
 
 import React from "react"
+import { Transition } from "react-spring/renderprops"
+// import anime from "animejs"
 import DesktopNav from "../components/Nav"
 import SideNav from "../components/SideNav"
 
@@ -13,7 +15,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "../styles/styles.scss"
 
-const Layout = ({ location, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,11 +26,33 @@ const Layout = ({ location, children }) => {
     }
   `)
 
+  // const exitTrans = () =>
+  //   anime({
+  //     targets: ".test",
+  //     translateX: "-12%",
+  //     duration: 1000,
+  //   })
+
+  // const entryTrans = () =>
+  //   anime({
+  //     targets: ".test",
+  //     translateX: 0,
+  //     duration: 1000,
+  //   })
+
   return (
     <div>
       <SideNav siteTitle={data.site.siteMetadata.title} />
       <DesktopNav siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Transition
+        config={{ duration: 500, delay: 200 }}
+        from={{ opacity: 0 }}
+        enter={{ opacity: 1 }}
+        leave={{ opacity: 0 }}
+      >
+        {() => style => <main style={style}>{children}</main>}
+      </Transition>
+
       {/* <footer></footer> */}
     </div>
   )

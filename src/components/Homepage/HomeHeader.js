@@ -36,7 +36,7 @@ export default function HomeHeader() {
       targets: ".home-header",
       delay: anime.stagger(500),
       opacity: [0, 100],
-      translateX: ["-2%", 0],
+      translateX: ["-5%", 0],
     })
   })
 
