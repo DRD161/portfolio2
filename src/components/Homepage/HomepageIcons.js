@@ -1,5 +1,5 @@
 import React from "react"
-import { animated, config } from "react-spring"
+import { animated } from "react-spring"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
@@ -11,7 +11,9 @@ const IconWrapper = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
   grid-column: 15;
-  grid-row: 8;
+  grid-row: 6;
+  align-self: center;
+  height: 50%;
 `
 
 const HomepageIcon = styled(animated.a)`
