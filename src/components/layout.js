@@ -1,13 +1,5 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import { Transition } from "react-spring/renderprops"
-// import anime from "animejs"
 import DesktopNav from "../components/Nav"
 import SideNav from "../components/SideNav"
 
@@ -26,20 +18,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  // const exitTrans = () =>
-  //   anime({
-  //     targets: ".test",
-  //     translateX: "-12%",
-  //     duration: 1000,
-  //   })
-
-  // const entryTrans = () =>
-  //   anime({
-  //     targets: ".test",
-  //     translateX: 0,
-  //     duration: 1000,
-  //   })
-
   return (
     <div>
       <SideNav siteTitle={data.site.siteMetadata.title} />
@@ -52,8 +30,6 @@ const Layout = ({ children }) => {
       >
         {() => style => <main style={style}>{children}</main>}
       </Transition>
-
-      {/* <footer></footer> */}
     </div>
   )
 }

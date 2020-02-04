@@ -11,7 +11,7 @@ import HomepageIcons from "../components/Homepage/HomepageIcons"
 const HomeWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(8, 0.15fr);
+  grid-template-rows: repeat(3, minmax(75px, auto));
 `
 
 const IndexPage = () => (
