@@ -1,5 +1,4 @@
-import React, { useLayoutEffect } from "react"
-import anime from "animejs"
+import React from "react"
 import styled from "styled-components"
 
 const SkillsWrapper = styled.section`
@@ -32,23 +31,6 @@ const SkillItem = styled.li`
 `
 
 export default function Skills() {
-  useLayoutEffect(() => {
-    const tl = anime.timeline({
-      duration: 800,
-      delay: anime.stagger(50),
-    })
-    tl.add({
-      targets: ".skills-text-wrapper",
-      delay: 600,
-      opacity: [0, 100],
-    }).add({
-      targets: ".skills-text",
-      easing: "easeInCubic",
-      duration: 1000,
-      opacity: [0, 100],
-    })
-  })
-
   return (
     <SkillsWrapper className="skills-text-wrapper">
       <SkillsHeader className="skills-text">Skills</SkillsHeader>
