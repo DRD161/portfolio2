@@ -1,5 +1,5 @@
 import React from "react"
-import { animated, config } from "react-spring"
+import { animated } from "react-spring"
 import { Spring } from "react-spring/renderprops"
 import { Link } from "gatsby"
 import styled from "styled-components"

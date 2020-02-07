@@ -8,7 +8,7 @@ import HomeSubText from "../components/Homepage/HomeSubText"
 import CTA from "../components/Homepage/CTA"
 import HomepageIcons from "../components/Homepage/HomepageIcons"
 
-const HomeWrapper = styled.div`
+const HomeWrapper = styled.main`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(3, minmax(75px, auto));

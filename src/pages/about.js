@@ -6,18 +6,16 @@ import AboutHeader from "../components/About/AboutHeader"
 import AboutSubText from "../components/About/AboutSubText"
 
 const AboutTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3% auto 0 auto;
-  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(3, minmax(75px, auto));
 `
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" description="Dylan's portfolio about page" />
-    <AboutHeader />
     <AboutTextWrapper>
+      <AboutHeader />
       <AboutSubText />
     </AboutTextWrapper>
   </Layout>

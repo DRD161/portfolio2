@@ -1,6 +1,6 @@
 import React from "react"
 import { animated } from "react-spring"
-import { Spring, config } from "react-spring/renderprops"
+import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
