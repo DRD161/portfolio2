@@ -26,7 +26,9 @@ const NavItem = styled(props => <Link {...props} />)`
 export default function Nav() {
   return (
     <NavWrapper>
-      <NavItem to="/">home</NavItem>
+      <NavItem to="/" activeClassName="active">
+        home
+      </NavItem>
       <NavItem to="/portfolio" activeClassName="active">
         portfolio
       </NavItem>

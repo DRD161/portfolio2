@@ -15,7 +15,7 @@ const HomeHeaderText = styled(animated.h1)`
 `
 
 const RedBar = styled(animated.div)`
-  width: 15px;
+  width: 10px;
   background: #d84358;
   grid-column: 2;
   grid-row: 4;

@@ -6,17 +6,25 @@ import Img from "gatsby-image"
 import { AiOutlineLink } from "react-icons/ai"
 import { DiGithubAlt } from "react-icons/di"
 
+const ProjectsWrapper = styled.section`
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: auto;
+  grid-column: 1 / -1;
+  grid-row: 2;
+`
+
 const ProjectRight = styled.div`
   display: flex;
-  justify-content: space-center;
-  margin-top: 5%;
+  grid-column: 1 / -2;
+  align-items: center;
 `
 
 const ProjectLeft = styled.div`
   display: flex;
-  justify-content: space-center;
   flex-direction: row-reverse;
-  margin-top: 5%;
+  grid-column: 2 / -1;
+  align-items: center;
 `
 
 const ProjectTextWrapper = styled.div`
@@ -45,7 +53,7 @@ const Tools = styled.p`
 `
 
 const StyledImg = styled(Img)`
-  width: 50%;
+  width: 100%;
 `
 
 const SkillsIconsWrapper = styled.div`
@@ -109,7 +117,7 @@ const Mockup = () => {
     }
   `)
   return (
-    <section>
+    <ProjectsWrapper>
       <ProjectRight>
         <StyledImg fluid={data.vewsMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
@@ -204,7 +212,7 @@ const Mockup = () => {
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
       </ProjectRight>
-    </section>
+    </ProjectsWrapper>
   )
 }
 export default Mockup

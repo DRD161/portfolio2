@@ -16,8 +16,8 @@ const AboutHeaderText = styled(animated.h3)`
 `
 
 const RedBar = styled(animated.div)`
-  width: 15px;
-  height: 80%;
+  width: 10px;
+  height: 70%;
   background: #d84358;
 `
 
