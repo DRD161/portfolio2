@@ -26,6 +26,13 @@ const RedBar = styled(animated.div)`
 export default function HomeHeader() {
   return (
     <>
+      <Spring
+        from={{ opacity: 0, transform: "translate3d(0,-40%, 0)" }}
+        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+        config={{ friction: 50 }}
+      >
+        {props => <RedBar style={props} />}
+      </Spring>
       <Wrapper>
         <Spring
           from={{
@@ -38,11 +45,7 @@ export default function HomeHeader() {
           }}
           config={{ delay: 1000, friction: 50 }}
         >
-          {props => (
-            <HomeHeaderText style={props} className="home-header">
-              hello.
-            </HomeHeaderText>
-          )}
+          {props => <HomeHeaderText style={props}>hello.</HomeHeaderText>}
         </Spring>
         <Spring
           from={{ opacity: 0, transform: "translate3d(-5%, 0, 0)" }}
@@ -50,19 +53,10 @@ export default function HomeHeader() {
           config={{ delay: 1100, friction: 50 }}
         >
           {props => (
-            <HomeHeaderText style={props} className="home-header">
-              my name is dylan
-            </HomeHeaderText>
+            <HomeHeaderText style={props}>my name is dylan</HomeHeaderText>
           )}
         </Spring>
       </Wrapper>
-      <Spring
-        from={{ opacity: 0, transform: "translate3d(0,-40%, 0)" }}
-        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
-        config={{ friction: 50 }}
-      >
-        {props => <RedBar className="bar" style={props} />}
-      </Spring>
     </>
   )
 }

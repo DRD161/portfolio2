@@ -12,7 +12,7 @@ const IconWrapper = styled.div`
   justify-content: space-between;
   grid-column: 15;
   grid-row: 6;
-  align-self: center;
+  align-self: end;
   height: 50%;
 `
 
@@ -26,7 +26,7 @@ const HomepageIcon = styled(animated.a)`
 
 export default function HomepageIcons() {
   return (
-    <IconWrapper className="icon-wrapper">
+    <IconWrapper>
       <Spring
         from={{
           opacity: 0,
@@ -39,11 +39,7 @@ export default function HomepageIcons() {
         config={{ delay: 1600, friction: 50 }}
       >
         {props => (
-          <HomepageIcon
-            href="mailto:dylan@dylandavenport.com"
-            className="homepage-icons"
-            style={props}
-          >
+          <HomepageIcon href="mailto:dylan@dylandavenport.com" style={props}>
             <AiOutlineMail />
           </HomepageIcon>
         )}
@@ -62,7 +58,6 @@ export default function HomepageIcons() {
         {props => (
           <HomepageIcon
             href="https://www.linkedin.com/in/dylandavenport/"
-            className="homepage-icons"
             style={props}
           >
             <AiOutlineLinkedin />
@@ -81,11 +76,7 @@ export default function HomepageIcons() {
         config={{ delay: 1800, friction: 50 }}
       >
         {props => (
-          <HomepageIcon
-            href="https://github.com/DRD161"
-            className="homepage-icons"
-            style={props}
-          >
+          <HomepageIcon href="https://github.com/DRD161" style={props}>
             <DiGithubAlt />
           </HomepageIcon>
         )}

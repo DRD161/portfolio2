@@ -17,7 +17,7 @@ const SubHeader = styled(animated.p)`
 
 export default function HomeSubText() {
   return (
-    <Wrapper className="home-text-wrapper">
+    <Wrapper>
       <Spring
         from={{
           opacity: 0,
@@ -25,10 +25,10 @@ export default function HomeSubText() {
         to={{
           opacity: 1,
         }}
-        config={{ delay: 1600 }}
+        delay={1600}
       >
         {props => (
-          <SubHeader className="home-subtext" style={props}>
+          <SubHeader style={props}>
             I’m a Front End Developer & UX enthusiast specializing in using
             JavaScript
           </SubHeader>
@@ -41,10 +41,10 @@ export default function HomeSubText() {
         to={{
           opacity: 1,
         }}
-        config={{ delay: 1650 }}
+        delay={1650}
       >
         {props => (
-          <SubHeader className="home-subtext" style={props}>
+          <SubHeader style={props}>
             to create dynamic data driven content for the web.
           </SubHeader>
         )}

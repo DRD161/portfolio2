@@ -20,7 +20,7 @@ const GithubLink = styled.a`
   grid-row: 3;
   font-size: 2rem;
   color: #eeeeee;
-  margin: 0;
+  margin-bottom: 20px;
   &:hover {
     color: #d84358;
   }

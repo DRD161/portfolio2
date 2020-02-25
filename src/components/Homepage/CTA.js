@@ -55,10 +55,10 @@ export default function CTA() {
           opacity: 1,
           transform: "translate3d(0, 0, 0)",
         }}
-        config={{ delay: 1500, friction: 50 }}
+        config={{ delay: 1500 }}
       >
         {props => (
-          <CtaButton className="button" style={props}>
+          <CtaButton style={props}>
             <CtaText>View my work</CtaText>
             <Chevron>
               <MdChevronRight />

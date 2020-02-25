@@ -1,27 +1,27 @@
 import React from "react"
+import { animated } from "react-spring"
 import { Spring } from "react-spring/renderprops"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
   display: grid;
-  grid-column: 2 / 6;
+  grid-column: 2 / 5;
   align-items: center;
 `
 
-const PortfolioHeaderText = styled.h3`
-  grid-column: 2;
+const ContactHeaderText = styled(animated.h3)`
+  grid-column: 3;
   font-size: 6rem;
   color: #eeeeee;
-  margin-bottom: 40px;
 `
 
-const RedBar = styled.div`
+const RedBar = styled(animated.div)`
   width: 10px;
-  background: #d84358;
   height: 70%;
+  background: #d84358;
 `
 
-export default function PortfolioHeader() {
+export default function ContactHeader() {
   return (
     <Wrapper>
       <Spring
@@ -32,19 +32,11 @@ export default function PortfolioHeader() {
         {props => <RedBar style={props} />}
       </Spring>
       <Spring
-        from={{
-          opacity: 0,
-          transform: "translate3d(-5%, 0, 0)",
-        }}
-        to={{
-          opacity: 1,
-          transform: "translate3d(5%, 0, 0)",
-        }}
+        from={{ opacity: 0, transform: "translate3d(-5%, 0, 0)" }}
+        to={{ opacity: 1, transform: "translate3d(10%, 0, 0)" }}
         config={{ delay: 1000, friction: 50 }}
       >
-        {props => (
-          <PortfolioHeaderText style={props}>portfolio</PortfolioHeaderText>
-        )}
+        {props => <ContactHeaderText style={props}>contact</ContactHeaderText>}
       </Spring>
     </Wrapper>
   )

@@ -14,13 +14,13 @@ const ProjectsWrapper = styled.section`
   grid-row: 2;
 `
 
-const ProjectRight = styled.div`
+const ProjectLeft = styled.div`
   display: flex;
   grid-column: 1 / -2;
   align-items: center;
 `
 
-const ProjectLeft = styled.div`
+const ProjectRight = styled.div`
   display: flex;
   flex-direction: row-reverse;
   grid-column: 2 / -1;
@@ -69,56 +69,58 @@ const SkillsIcon = styled.a`
   }
 `
 
-const Mockup = () => {
+// GatsbyImageSharpFluid_noBase64 removes image blur
+export default function Projects() {
   const data = useStaticQuery(graphql`
     query {
       vewsMockup: file(relativePath: { eq: "vews-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       cryptoMockup: file(relativePath: { eq: "crypto-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       tipMockup: file(relativePath: { eq: "tip-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       ecommerceMockup: file(relativePath: { eq: "ecommerce-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       pongMockup: file(relativePath: { eq: "pong-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
       galleryMockup: file(relativePath: { eq: "gallery-mockup.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
     }
   `)
+
   return (
     <ProjectsWrapper>
-      <ProjectRight>
+      <ProjectLeft>
         <StyledImg fluid={data.vewsMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Vews</ProjectHeader>
@@ -136,8 +138,8 @@ const Mockup = () => {
             </SkillsIcon>
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
-      </ProjectRight>
-      <ProjectLeft>
+      </ProjectLeft>
+      <ProjectRight>
         <StyledImg fluid={data.cryptoMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Crypto Graph</ProjectHeader>
@@ -155,8 +157,8 @@ const Mockup = () => {
             </SkillsIcon>
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
-      </ProjectLeft>
-      <ProjectRight>
+      </ProjectRight>
+      <ProjectLeft>
         <StyledImg fluid={data.tipMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Tip Calculator</ProjectHeader>
@@ -174,8 +176,8 @@ const Mockup = () => {
             </SkillsIcon>
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
-      </ProjectRight>
-      <ProjectLeft>
+      </ProjectLeft>
+      <ProjectRight>
         <StyledImg fluid={data.ecommerceMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>E-commerce Store</ProjectHeader>
@@ -183,7 +185,7 @@ const Mockup = () => {
             An e-commerce store that I built for an entrepreneur in my
             community.
           </ProjectText>
-          <Tools>Shopify / Ruby / Liquid Templating</Tools>
+          <Tools>Shopify / Ruby / Liquid</Tools>
           <SkillsIconsWrapper>
             <SkillsIcon href="https://vue-tip.netlify.com/">
               <AiOutlineLink />
@@ -193,8 +195,8 @@ const Mockup = () => {
             </SkillsIcon>
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
-      </ProjectLeft>
-      <ProjectRight>
+      </ProjectRight>
+      <ProjectLeft>
         <StyledImg fluid={data.pongMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Pong Clone</ProjectHeader>
@@ -211,8 +213,7 @@ const Mockup = () => {
             </SkillsIcon>
           </SkillsIconsWrapper>
         </ProjectTextWrapper>
-      </ProjectRight>
+      </ProjectLeft>
     </ProjectsWrapper>
   )
 }
-export default Mockup
