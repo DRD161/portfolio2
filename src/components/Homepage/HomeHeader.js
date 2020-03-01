@@ -5,20 +5,27 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   grid-column: 3 / 16;
-  grid-row: 4;
+  grid-row: 3;
+  @media screen and (max-width: 768px) {
+    grid-column: 3 / 17;
+    grid-row: 3;
+  }
 `
 
 const HomeHeaderText = styled(animated.h1)`
   font-size: 9rem;
   text-transform: uppercase;
   color: #eeeeee;
+  @media screen and (max-width: 768px) {
+    font-size: 7rem;
+  }
 `
 
 const RedBar = styled(animated.div)`
   width: 10px;
   background: #d84358;
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 3;
   height: 90%;
   margin: auto;
 `

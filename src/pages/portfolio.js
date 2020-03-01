@@ -9,8 +9,7 @@ import Mockup from "../components/Portfolio/Projects"
 const PortfolioWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: auto;
-  position: relative;
+  grid-auto-rows: minmax(120px, auto);
 `
 
 const GithubLink = styled.a`

@@ -10,7 +10,6 @@ const CtaButton = styled(animated.div)`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin-top: 5%;
   border: 3px solid #d84358;
   border-radius: 2px;
   &:hover i {
@@ -40,7 +39,11 @@ const Chevron = styled.i`
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   grid-column: 3/6;
-  grid-row: 6;
+  grid-row: 5;
+  align-self: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 3/8;
+  }
 `
 
 export default function CTA() {

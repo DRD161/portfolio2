@@ -9,7 +9,7 @@ import { DiGithubAlt } from "react-icons/di"
 const ProjectsWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: auto;
+  grid-auto-rows: minmax(120px, auto);
   grid-column: 1 / -1;
   grid-row: 2;
 `

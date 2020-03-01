@@ -14,11 +14,10 @@ const SubText = styled.p`
   grid-row: 3;
 `
 
-const Link = styled.a`
+const ContactLink = styled.a`
   display: inline-block;
   color: #d84358;
   font-size: 2rem;
-  font-weight: 700;
   &:hover {
     color: #eeeeee;
   }
@@ -42,8 +41,21 @@ export default function ContactSubText() {
             <>
               <SubText style={props}>
                 Whether you’re looking to collaborate on a project, grab a
-                coffee or simply just want to say hi. {}Get in touch! I’m always
-                looking for interesting and creative people to work with!
+                coffee or simply just want to say hi. {}Get in touch!
+              </SubText>
+            </>
+          )}
+        </Spring>
+        <Spring
+          from={{ opacity: 0, transform: "translate3d(0, -15%, 0)" }}
+          to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+          delay={1650}
+        >
+          {props => (
+            <>
+              <SubText style={props}>
+                I’m always looking for interesting and creative people to work
+                with!
               </SubText>
             </>
           )}
@@ -53,23 +65,12 @@ export default function ContactSubText() {
         <Spring
           from={{ opacity: 0, transform: "translate3d(0, -15%, 0)" }}
           to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
-          delay={1650}
-        >
-          {props => (
-            <Link href="mailto:dylan@dylandavenport.com" style={props}>
-              dylan@dylandavenport.com
-            </Link>
-          )}
-        </Spring>
-        <Spring
-          from={{ opacity: 0, transform: "translate3d(0, -15%, 0)" }}
-          to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
           delay={1700}
         >
           {props => (
-            <Link href="https://github.com/DRD161" style={props}>
-              https://github.com/DRD161
-            </Link>
+            <ContactLink href="mailto:dylan@dylandavenport.com" style={props}>
+              dylan@dylandavenport.com
+            </ContactLink>
           )}
         </Spring>
         <Spring
@@ -78,12 +79,23 @@ export default function ContactSubText() {
           delay={1750}
         >
           {props => (
-            <Link
+            <ContactLink href="https://github.com/DRD161" style={props}>
+              https://github.com/DRD161
+            </ContactLink>
+          )}
+        </Spring>
+        <Spring
+          from={{ opacity: 0, transform: "translate3d(0, -15%, 0)" }}
+          to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+          delay={1800}
+        >
+          {props => (
+            <ContactLink
               href="https://www.linkedin.com/in/dylandavenport"
               style={props}
             >
               https://www.linkedin.com/in/dylandavenport/
-            </Link>
+            </ContactLink>
           )}
         </Spring>
       </LinkGroup>

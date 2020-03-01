@@ -7,13 +7,12 @@ import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai"
 import { DiGithubAlt } from "react-icons/di"
 
 const IconWrapper = styled.div`
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
   grid-column: 15;
-  grid-row: 6;
-  align-self: end;
-  height: 50%;
+  grid-row: 5;
+  align-self: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 14/16;
+  }
 `
 
 const HomepageIcon = styled(animated.a)`

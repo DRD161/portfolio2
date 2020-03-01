@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   display: grid;
   grid-column: 2 / 6;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 3 / 6;
+  }
 `
 
 const PortfolioHeaderText = styled.h3`
