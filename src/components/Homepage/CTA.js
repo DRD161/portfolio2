@@ -41,6 +41,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   grid-column: 3/6;
   grid-row: 5;
   align-self: center;
+  height: 100%;
   @media screen and (max-width: 768px) {
     grid-column: 3/8;
   }

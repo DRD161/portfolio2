@@ -15,13 +15,16 @@ const PortfolioWrapper = styled.div`
 const GithubLink = styled.a`
   display: flex;
   justify-content: center;
+  align-self: center;
   grid-column: 7 / 11;
   grid-row: 3;
   font-size: 2rem;
   color: #eeeeee;
-  margin-bottom: 20px;
   &:hover {
     color: #d84358;
+  }
+  @media screen and (max-width: 768px) {
+    grid-column: 6 / 12;
   }
 `
 
@@ -33,6 +36,11 @@ const TopShape = styled.div`
   transform: skewY(-8deg);
   background-color: #262525;
   z-index: -1;
+  @media screen and (max-width: 768px) {
+    top: 18%;
+    width: 100%;
+    height: 50%;
+  }
 `
 
 const BottomShape = styled.div`
@@ -43,6 +51,11 @@ const BottomShape = styled.div`
   transform: skewY(8deg);
   background-color: #262525;
   z-index: -1;
+  @media screen and (max-width: 768px) {
+    top: 105%;
+    width: 100%;
+    height: 50%;
+  }
 `
 
 export default function portfolio() {

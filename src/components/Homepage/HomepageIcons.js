@@ -10,6 +10,7 @@ const IconWrapper = styled.div`
   grid-column: 15;
   grid-row: 5;
   align-self: center;
+  height: 100%;
   @media screen and (max-width: 768px) {
     grid-column: 14/16;
   }

@@ -6,8 +6,11 @@ import styled from "styled-components"
 import Skills from "../About/Skills"
 
 const AboutTextWrapper = styled.main`
-  grid-column: 4 / 16;
+  grid-column: 3 / 16;
   grid-row: 3;
+  @media screen and (max-width: 768px) {
+    grid-column: 2 / 16;
+  }
 `
 
 const SubText = styled.p`
@@ -57,7 +60,7 @@ export default function AboutSubText() {
               {props => (
                 <SubText style={props}>
                   I'm always open to collaborate with great people and solve
-                  unique challenges. If you're interested{" "}
+                  unique challenges. <br></br>If you're interested{" "}
                   <ContactLink to="/contact">get in touch!</ContactLink>
                 </SubText>
               )}

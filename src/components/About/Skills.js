@@ -30,6 +30,9 @@ const SkillItem = styled.li`
   color: #eeeeee;
   font-size: 1.2rem;
   font-style: italic;
+  @media screen and (max-width: 768px) {
+    font-size: 1.09rem;
+  }
 `
 
 export default function Skills() {

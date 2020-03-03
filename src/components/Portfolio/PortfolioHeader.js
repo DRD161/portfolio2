@@ -16,6 +16,10 @@ const PortfolioHeaderText = styled.h3`
   font-size: 6rem;
   color: #eeeeee;
   margin-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 5rem;
+    margin-bottom: auto;
+  }
 `
 
 const RedBar = styled.div`

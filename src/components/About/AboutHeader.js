@@ -7,17 +7,23 @@ const Wrapper = styled.div`
   display: grid;
   grid-column: 2 / 5;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 3 / 8;
+  }
 `
 
 const AboutHeaderText = styled(animated.h3)`
   grid-column: 3;
   font-size: 6rem;
   color: #eeeeee;
+  @media screen and (max-width: 768px) {
+    font-size: 5rem;
+  }
 `
 
 const RedBar = styled(animated.div)`
   width: 10px;
-  height: 80%;
+  height: 70%;
   background: #d84358;
 `
 

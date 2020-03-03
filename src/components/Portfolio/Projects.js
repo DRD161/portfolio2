@@ -18,6 +18,10 @@ const ProjectLeft = styled.div`
   display: flex;
   grid-column: 1 / -2;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 1 / -1;
+    padding: 0 10px;
+  }
 `
 
 const ProjectRight = styled.div`
@@ -25,12 +29,19 @@ const ProjectRight = styled.div`
   flex-direction: row-reverse;
   grid-column: 2 / -1;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-column: 1 / -1;
+    padding: 0 10px;
+  }
 `
 
 const ProjectTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
+  @media screen and (max-width: 768px) {
+    width: 75%;
+  }
 `
 
 const ProjectHeader = styled.h1`
