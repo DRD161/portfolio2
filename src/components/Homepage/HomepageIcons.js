@@ -11,6 +11,8 @@ const IconWrapper = styled.div`
   grid-row: 5;
   align-self: center;
   height: 100%;
+  align-items: center;
+  display: flex;
   @media screen and (max-width: 768px) {
     grid-column: 14/16;
   }
@@ -19,6 +21,7 @@ const IconWrapper = styled.div`
 const HomepageIcon = styled(animated.a)`
   color: #eeeeee;
   font-size: 2rem;
+  display: flex;
   &:hover {
     color: #d84358;
   }

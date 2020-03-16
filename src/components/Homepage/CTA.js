@@ -12,6 +12,7 @@ const CtaButton = styled(animated.div)`
   padding: 10px;
   border: 3px solid #d84358;
   border-radius: 2px;
+  width: 100%;
   &:hover i {
     color: #d84358;
   }
@@ -41,7 +42,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   grid-column: 3/6;
   grid-row: 5;
   align-self: center;
-  height: 100%;
+  display: flex;
   @media screen and (max-width: 768px) {
     grid-column: 3/8;
   }
