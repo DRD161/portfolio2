@@ -16,6 +16,9 @@ const SubHeader = styled(animated.p)`
   color: #959595;
   font-style: italic;
   margin-bottom: 0;
+  @media screen and (max-width: 1440px) {
+    font-size: 1.6rem;
+  }
   @media screen and (max-width: 768px) {
     font-size: 1.3rem;
   }

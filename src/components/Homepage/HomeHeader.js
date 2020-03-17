@@ -16,6 +16,9 @@ const HomeHeaderText = styled(animated.h1)`
   font-size: 9rem;
   text-transform: uppercase;
   color: #eeeeee;
+  @media screen and (max-width: 1440px) {
+    font-size: 7.8rem;
+  }
   @media screen and (max-width: 768px) {
     font-size: 7rem;
   }
