@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react'
+import styled from 'styled-components'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import HomeHeader from "../components/Homepage/HomeHeader"
-import HomeSubText from "../components/Homepage/HomeSubText"
-import CTA from "../components/Homepage/CTA"
-import HomepageIcons from "../components/Homepage/HomepageIcons"
+import HomeHeader from '../components/Homepage/HomeHeader'
+import HomeSubText from '../components/Homepage/HomeSubText'
+// import CTA from "../components/Homepage/CTA"
+import HomepageIcons from '../components/Homepage/HomepageIcons'
 
 const HomeWrapper = styled.main`
   display: grid;
@@ -23,7 +23,7 @@ const IndexPage = () => (
       <SEO title="Home" description="Dylan's portfolio homepage" />
       <HomeHeader />
       <HomeSubText />
-      <CTA />
+      {/* <CTA /> */}
       <HomepageIcons />
     </HomeWrapper>
   </Layout>

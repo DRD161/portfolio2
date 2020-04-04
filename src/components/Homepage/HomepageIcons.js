@@ -1,29 +1,25 @@
-import React from "react"
-import { animated } from "react-spring"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
+import React from 'react'
+import { animated } from 'react-spring'
+import { Spring } from 'react-spring/renderprops'
+import styled from 'styled-components'
 
-import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai"
-import { DiGithubAlt } from "react-icons/di"
+import { AiFillGithub, AiOutlineMail, AiFillLinkedin } from 'react-icons/ai'
 
 const IconWrapper = styled.div`
-  grid-column: 15;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 3/5;
   grid-row: 5;
-  align-self: center;
-  height: 100%;
   align-items: center;
-  display: flex;
-  @media screen and (max-width: 768px) {
-    grid-column: 14/16;
-  }
+  height: 100%;
 `
 
 const HomepageIcon = styled(animated.a)`
   color: #eeeeee;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   &:hover {
-    color: #d84358;
+    color: #ff8a00;
   }
 `
 
@@ -33,13 +29,30 @@ export default function HomepageIcons() {
       <Spring
         from={{
           opacity: 0,
-          transform: "translate3d(-5%, 0, 0)",
+          transform: 'translate3d(-5%, 0, 0)',
         }}
         to={{
           opacity: 1,
-          transform: "translate3d(0, 0, 0)",
+          transform: 'translate3d(0, 0, 0)',
         }}
         config={{ delay: 1600, friction: 50 }}
+      >
+        {props => (
+          <HomepageIcon href="https://github.com/DRD161" style={props}>
+            <AiFillGithub />
+          </HomepageIcon>
+        )}
+      </Spring>
+      <Spring
+        from={{
+          opacity: 0,
+          transform: 'translate3d(-5%, 0, 0)',
+        }}
+        to={{
+          opacity: 1,
+          transform: 'translate3d(0, 0, 0)',
+        }}
+        config={{ delay: 1700, friction: 50 }}
       >
         {props => (
           <HomepageIcon href="mailto:dylan@dylandavenport.com" style={props}>
@@ -50,37 +63,20 @@ export default function HomepageIcons() {
       <Spring
         from={{
           opacity: 0,
-          transform: "translate3d(-5%, 0, 0)",
+          transform: 'translate3d(-5%, 0, 0)',
         }}
         to={{
           opacity: 1,
-          transform: "translate3d(0, 0, 0)",
+          transform: 'translate3d(0, 0, 0)',
         }}
-        config={{ delay: 1700, friction: 50 }}
+        config={{ delay: 1800, friction: 50 }}
       >
         {props => (
           <HomepageIcon
             href="https://www.linkedin.com/in/dylandavenport/"
             style={props}
           >
-            <AiOutlineLinkedin />
-          </HomepageIcon>
-        )}
-      </Spring>
-      <Spring
-        from={{
-          opacity: 0,
-          transform: "translate3d(-5%, 0, 0)",
-        }}
-        to={{
-          opacity: 1,
-          transform: "translate3d(0, 0, 0)",
-        }}
-        config={{ delay: 1800, friction: 50 }}
-      >
-        {props => (
-          <HomepageIcon href="https://github.com/DRD161" style={props}>
-            <DiGithubAlt />
+            <AiFillLinkedin />
           </HomepageIcon>
         )}
       </Spring>

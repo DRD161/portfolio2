@@ -1,7 +1,7 @@
-import React from "react"
-import { animated } from "react-spring"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
+import React from 'react'
+import { animated } from 'react-spring'
+import { Spring } from 'react-spring/renderprops'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   grid-column: 3/12;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 const SubHeader = styled(animated.p)`
   font-size: 1.7rem;
-  color: #959595;
+  color: #eeeeee;
   font-style: italic;
   margin-bottom: 0;
   @media screen and (max-width: 1440px) {

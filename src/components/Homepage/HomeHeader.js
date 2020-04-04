@@ -1,7 +1,7 @@
-import React from "react"
-import { animated } from "react-spring"
-import { Spring } from "react-spring/renderprops"
-import styled from "styled-components"
+import React from 'react'
+import { animated } from 'react-spring'
+import { Spring } from 'react-spring/renderprops'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   grid-column: 3 / 16;
@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 
 const HomeHeaderText = styled(animated.h1)`
   font-size: 9rem;
-  text-transform: uppercase;
   color: #eeeeee;
   @media screen and (max-width: 1440px) {
     font-size: 7.8rem;
@@ -24,46 +23,44 @@ const HomeHeaderText = styled(animated.h1)`
   }
 `
 
-const RedBar = styled(animated.div)`
-  width: 10px;
-  background: #d84358;
-  grid-column: 2;
-  grid-row: 3;
-  height: 90%;
-  margin: auto;
-`
+const boldHeader = {
+  fontWeight: '400',
+}
+
+const orangeHeader = {
+  color: '#FF8A00',
+}
 
 export default function HomeHeader() {
   return (
     <>
-      <Spring
-        from={{ opacity: 0, transform: "translate3d(0,-40%, 0)" }}
-        to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
-        config={{ friction: 50 }}
-      >
-        {props => <RedBar style={props} />}
-      </Spring>
       <Wrapper>
         <Spring
           from={{
             opacity: 0,
-            transform: "translate3d(-5%, 0, 0)",
+            transform: 'translate3d(-5%, 0, 0)',
           }}
           to={{
             opacity: 1,
-            transform: "translate3d(0, 0, 0)",
+            transform: 'translate3d(0, 0, 0)',
           }}
           config={{ delay: 1000, friction: 50 }}
         >
-          {props => <HomeHeaderText style={props}>hello.</HomeHeaderText>}
+          {props => (
+            <HomeHeaderText style={props}>
+              Hello! <span style={boldHeader}>My name</span>
+            </HomeHeaderText>
+          )}
         </Spring>
         <Spring
-          from={{ opacity: 0, transform: "translate3d(-5%, 0, 0)" }}
-          to={{ opacity: 1, transform: "translate3d(0, 0, 0)" }}
+          from={{ opacity: 0, transform: 'translate3d(-5%, 0, 0)' }}
+          to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
           config={{ delay: 1100, friction: 50 }}
         >
           {props => (
-            <HomeHeaderText style={props}>my name is dylan</HomeHeaderText>
+            <HomeHeaderText style={props}>
+              is <span style={{ ...orangeHeader, ...boldHeader }}>Dylan</span>
+            </HomeHeaderText>
           )}
         </Spring>
       </Wrapper>
