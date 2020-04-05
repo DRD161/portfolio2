@@ -1,21 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import { slide as Menu } from "react-burger-menu"
-import SideNavIcons from "./SideNavIcons"
+import React from 'react'
+import { Link } from 'gatsby'
+import { slide as Menu } from 'react-burger-menu'
+import SideNavIcons from './SideNavIcons'
 
-import styled from "styled-components"
-import "../styles/sidenav.scss"
-
-const IconWrapper = styled.div`
-  display: flex !important;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 100% auto;
-`
+import '../styles/sidenav.scss'
 
 const SideNav = () => (
   <header>
-    <Menu crossButtonClassName={"cross"}>
+    <Menu crossButtonClassName={'cross'}>
       <Link to="/" activeClassName="active">
         home
       </Link>
@@ -28,9 +20,9 @@ const SideNav = () => (
       <Link to="/contact" activeClassName="active">
         contact
       </Link>
-      <IconWrapper>
+      <div>
         <SideNavIcons />
-      </IconWrapper>
+      </div>
     </Menu>
   </header>
 )

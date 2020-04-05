@@ -1,7 +1,7 @@
-import React from "react"
-import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai"
-import { DiGithubAlt } from "react-icons/di"
-import styled from "styled-components"
+import React from 'react'
+import { AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai'
+import { DiGithubAlt } from 'react-icons/di'
+import styled from 'styled-components'
 
 const Icon = styled.a`
   color: #eeeeee;
@@ -11,7 +11,7 @@ const Icon = styled.a`
     margin-right: 0;
   }
   &:hover {
-    color: #d84358;
+    color: #ff8a00;
   }
 `
 

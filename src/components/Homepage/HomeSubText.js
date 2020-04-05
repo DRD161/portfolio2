@@ -4,8 +4,8 @@ import { Spring } from 'react-spring/renderprops'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  grid-column: 3/12;
-  grid-row: 4;
+  grid-column: 2/13;
+  grid-row: 3;
   @media screen and (max-width: 768px) {
     grid-column: 3/17;
   }
@@ -39,7 +39,6 @@ export default function HomeSubText() {
         {props => (
           <SubHeader style={props}>
             I’m a Front End Developer & UX enthusiast specializing in using
-            JavaScript
           </SubHeader>
         )}
       </Spring>
@@ -54,7 +53,7 @@ export default function HomeSubText() {
       >
         {props => (
           <SubHeader style={props}>
-            to create dynamic data driven content for the web.
+            JavaScript to create dynamic data driven content for the web.
           </SubHeader>
         )}
       </Spring>

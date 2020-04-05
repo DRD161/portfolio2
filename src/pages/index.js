@@ -4,9 +4,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import HomeHeader from '../components/Homepage/HomeHeader'
-import HomeSubText from '../components/Homepage/HomeSubText'
+// import HomeSubText from '../components/Homepage/HomeSubText'
 // import CTA from "../components/Homepage/CTA"
-import HomepageIcons from '../components/Homepage/HomepageIcons'
+// import HomepageIcons from '../components/Homepage/HomepageIcons'
 
 const HomeWrapper = styled.main`
   display: grid;
@@ -22,9 +22,8 @@ const IndexPage = () => (
     <HomeWrapper>
       <SEO title="Home" description="Dylan's portfolio homepage" />
       <HomeHeader />
-      <HomeSubText />
-      {/* <CTA /> */}
-      <HomepageIcons />
+      {/* <HomeSubText /> */}
+      {/* <HomepageIcons /> */}
     </HomeWrapper>
   </Layout>
 )

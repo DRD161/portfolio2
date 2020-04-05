@@ -3,8 +3,7 @@
 // Colors
 $black: #000000;
 $primary-dark: #333333;
-$primary-blue: #4fd0f4;
-$primary-red: #d84358;
+$primary-orange: #ff8a00;
 $primary-white: #eeeeee;
 $primary-white-hover: #eeeeeeda;
 
@@ -28,11 +27,7 @@ $large-monitor: 1400px;
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  width: 70%;
   background: $primary-white;
-  &:nth-child(2) {
-    margin-left: 25%;
-  }
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -94,12 +89,12 @@ $large-monitor: 1400px;
   line-height: 60px;
   transition: 0.2s ease-in;
   &:hover {
-    color: $primary-red;
+    color: $primary-orange;
   }
 }
 
 .active {
-  color: $primary-red;
+  color: $primary-orange;
 }
 
 /* Styling of overlay */
@@ -110,8 +105,8 @@ $large-monitor: 1400px;
 }
 
 /* Hide on desktop */
-@media screen and (min-width: 769px) {
-  .bm-burger-button {
-    display: none;
-  }
-}
+// @media screen and (min-width: 769px) {
+//   .bm-burger-button {
+//     display: none;
+//   }
+// }

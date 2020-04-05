@@ -3,21 +3,22 @@ import { animated } from 'react-spring'
 import { Spring } from 'react-spring/renderprops'
 import styled from 'styled-components'
 
-import { AiFillGithub, AiOutlineMail, AiFillLinkedin } from 'react-icons/ai'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const IconWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column: 3/5;
-  grid-row: 5;
+  grid-column: 2/4;
+  grid-row: 3;
   align-items: center;
-  height: 100%;
+  margin-top: 25%;
 `
 
 const HomepageIcon = styled(animated.a)`
   color: #eeeeee;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   display: flex;
+  width: 50%;
   &:hover {
     color: #ff8a00;
   }
@@ -39,7 +40,7 @@ export default function HomepageIcons() {
       >
         {props => (
           <HomepageIcon href="https://github.com/DRD161" style={props}>
-            <AiFillGithub />
+            <FaGithub />
           </HomepageIcon>
         )}
       </Spring>
@@ -56,7 +57,7 @@ export default function HomepageIcons() {
       >
         {props => (
           <HomepageIcon href="mailto:dylan@dylandavenport.com" style={props}>
-            <AiOutlineMail />
+            <FaLinkedin />
           </HomepageIcon>
         )}
       </Spring>
@@ -76,7 +77,7 @@ export default function HomepageIcons() {
             href="https://www.linkedin.com/in/dylandavenport/"
             style={props}
           >
-            <AiFillLinkedin />
+            <FaEnvelope />
           </HomepageIcon>
         )}
       </Spring>

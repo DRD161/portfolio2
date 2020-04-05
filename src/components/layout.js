@@ -1,11 +1,11 @@
-import React from "react"
-import { Transition } from "react-spring/renderprops"
-import DesktopNav from "../components/Nav"
-import SideNav from "../components/SideNav"
+import React from 'react'
+import { Transition } from 'react-spring/renderprops'
+import DesktopNav from '../components/Nav'
+import SideNav from '../components/SideNav'
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 
-import "../styles/styles.scss"
+import '../styles/styles.scss'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <SideNav siteTitle={data.site.siteMetadata.title} />
-      <DesktopNav siteTitle={data.site.siteMetadata.title} />
+      {/* <DesktopNav siteTitle={data.site.siteMetadata.title} /> */}
       <Transition
         config={{ duration: 500, delay: 200 }}
         from={{ opacity: 0 }}
