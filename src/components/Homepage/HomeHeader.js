@@ -10,23 +10,13 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(18, minmax(80px, 1fr));
   grid-auto-rows: minmax(80px, 200px);
   grid-column: 3 / 16;
-  grid-row: 3;
-  @media screen and (max-width: 768px) {
-    grid-column: 3 / 17;
-    grid-row: 3;
-  }
+  grid-row: 2;
 `
 
 const HomeHeaderText = styled(animated.h1)`
   font-size: 9rem;
   color: #eeeeee;
   grid-column: 2/6;
-  @media screen and (max-width: 1440px) {
-    font-size: 7.8rem;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 7rem;
-  }
 `
 
 const BoldHeader1 = styled.h1`
@@ -59,43 +49,31 @@ const TopCurlyBrace = styled.p`
   font-family: 'Oswald', 'sans-serif';
   grid-column: 1;
   grid-row: 1;
-  margin: -30% auto 0;
+  margin: -30% 0;
 `
 
 const BottomCurlyBrace = styled.p`
   color: #ff8a00;
   font-size: 8rem;
   font-family: 'Oswald', 'sans-serif';
-  grid-column: 13;
+  grid-column: 11;
   grid-row: 3;
-  margin: -80% auto 0;
+  margin: -70% auto 0;
 `
 
 export default function HomeHeader() {
   return (
     <Wrapper>
       <Spring
-        from={{
-          opacity: 0,
-          transform: 'translate3d(-5%, 0, 0)',
-        }}
-        to={{
-          opacity: 1,
-          transform: 'translate3d(0, 0, 0)',
-        }}
-        config={{ delay: 1000, friction: 50 }}
+        from={{ opacity: 0, transform: 'translate3d(0, -40%, 0)' }}
+        to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
+        config={{ friction: 50 }}
       >
-        {props => <TopCurlyBrace>&#123;</TopCurlyBrace>}
+        {props => <TopCurlyBrace style={props}>&#123;</TopCurlyBrace>}
       </Spring>
       <Spring
-        from={{
-          opacity: 0,
-          transform: 'translate3d(-5%, 0, 0)',
-        }}
-        to={{
-          opacity: 1,
-          transform: 'translate3d(0, 0, 0)',
-        }}
+        from={{ opacity: 0, transform: 'translate3d(-5%, 0, 0)' }}
+        to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
         config={{ delay: 1000, friction: 50 }}
       >
         {props => <HomeHeaderText style={props}>Hello!</HomeHeaderText>}
@@ -103,7 +81,7 @@ export default function HomeHeader() {
       <Spring
         from={{ opacity: 0, transform: 'translate3d(-5%, 0, 0)' }}
         to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
-        config={{ delay: 1100, friction: 50 }}
+        config={{ delay: 1000, friction: 50 }}
       >
         {props => <BoldHeader1 style={props}>My name</BoldHeader1>}
       </Spring>
@@ -124,17 +102,11 @@ export default function HomeHeader() {
       <HomeSubText />
       <HomepageIcons />
       <Spring
-        from={{
-          opacity: 0,
-          transform: 'translate3d(-5%, 0, 0)',
-        }}
-        to={{
-          opacity: 1,
-          transform: 'translate3d(0, 0, 0)',
-        }}
-        config={{ delay: 1000, friction: 50 }}
+        from={{ opacity: 0, transform: 'translate3d(0, 20%, 0)' }}
+        to={{ opacity: 1, transform: 'translate3d(0, 0, 0)' }}
+        config={{ friction: 50 }}
       >
-        {props => <BottomCurlyBrace>&#125;</BottomCurlyBrace>}
+        {props => <BottomCurlyBrace style={props}>&#125;</BottomCurlyBrace>}
       </Spring>
     </Wrapper>
   )

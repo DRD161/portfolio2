@@ -1,15 +1,35 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import PortfolioHeader from "../components/Portfolio/PortfolioHeader"
-import Mockup from "../components/Portfolio/Projects"
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+// import PortfolioHeader from '../components/Portfolio/PortfolioHeader'
+import Mockup from '../components/Portfolio/Projects'
 
 const PortfolioWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-auto-rows: minmax(120px, auto);
+`
+
+const PageNumber = styled.h1`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eeeeee;
+  font-size: 10rem;
+  grid-column: 15/17;
+  grid-row: 1;
+  font-weight: 400;
+  opacity: 10%;
+`
+
+const PageTitle = styled.h1`
+  color: #eeeeee;
+  font-size: 2rem;
+  grid-column: 15/17;
+  grid-row: 1;
+  font-weight: 400;
 `
 
 const GithubLink = styled.a`
@@ -64,7 +84,10 @@ export default function portfolio() {
       <SEO title="Portfolio" description="Dylan's portfolio work page" />
       <TopShape />
       <PortfolioWrapper>
-        <PortfolioHeader />
+        <PageNumber>
+          02
+          <PageTitle>portfolio</PageTitle>
+        </PageNumber>
         <Mockup />
         <GithubLink href="https://github.com/DRD161">
           See more on Github

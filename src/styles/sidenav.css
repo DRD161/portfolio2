@@ -48,6 +48,7 @@
 
 .bm-menu-wrap {
   position: fixed;
+  width: 100%;
   height: 100%;
   top: 0;
   left: -15px;
@@ -59,17 +60,17 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   -webkit-box-shadow: 3px 5px 10px 2px #000000;
-          box-shadow: 3px 5px 10px 2px #000000;
+  box-shadow: 3px 5px 10px 2px #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Morph shape necessary with bubble or elastic */

@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
 import HomeHeader from '../components/Homepage/HomeHeader'
-// import HomeSubText from '../components/Homepage/HomeSubText'
-// import CTA from "../components/Homepage/CTA"
-// import HomepageIcons from '../components/Homepage/HomepageIcons'
 
 const HomeWrapper = styled.main`
   display: grid;
@@ -17,13 +13,35 @@ const HomeWrapper = styled.main`
   }
 `
 
+const PageNumber = styled.h1`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eeeeee;
+  font-size: 10rem;
+  grid-column: 15/17;
+  grid-row: 1;
+  font-weight: 400;
+  opacity: 10%;
+`
+
+const PageTitle = styled.h1`
+  color: #eeeeee;
+  font-size: 2rem;
+  grid-column: 15/17;
+  grid-row: 1;
+  font-weight: 400;
+`
+
 const IndexPage = () => (
   <Layout>
     <HomeWrapper>
       <SEO title="Home" description="Dylan's portfolio homepage" />
       <HomeHeader />
-      {/* <HomeSubText /> */}
-      {/* <HomepageIcons /> */}
+      <PageNumber>
+        01
+        <PageTitle>home</PageTitle>
+      </PageNumber>
     </HomeWrapper>
   </Layout>
 )

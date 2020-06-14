@@ -52,9 +52,10 @@ $large-monitor: 1400px;
 
 .bm-menu-wrap {
   position: fixed;
+  width: 100%;
   height: 100%;
   top: 0;
-  left: -15px;
+  left: 0;
 }
 
 /* General sidebar styles */
@@ -84,9 +85,9 @@ $large-monitor: 1400px;
   display: inline-block;
   color: $primary-white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  line-height: 60px;
+  line-height: 90px;
   transition: 0.2s ease-in;
   &:hover {
     color: $primary-orange;

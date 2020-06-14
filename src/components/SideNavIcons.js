@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Icon = styled.a`
   color: #eeeeee;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-right: 10px;
   &:nth-child(3) {
     margin-right: 0;

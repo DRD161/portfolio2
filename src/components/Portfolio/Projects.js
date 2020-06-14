@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import { AiOutlineLink } from "react-icons/ai"
-import { DiGithubAlt } from "react-icons/di"
+import { AiOutlineLink } from 'react-icons/ai'
+import { DiGithubAlt } from 'react-icons/di'
 
 const ProjectsWrapper = styled.section`
   display: grid;
@@ -15,13 +15,12 @@ const ProjectsWrapper = styled.section`
 `
 
 const ProjectLeft = styled.div`
-  display: flex;
-  grid-column: 1 / -2;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(80px, 1fr);
+  grid-column: 1 / -1;
   align-items: center;
-  @media screen and (max-width: 768px) {
-    grid-column: 1 / -1;
-    padding: 0 10px;
-  }
 `
 
 const ProjectRight = styled.div`
