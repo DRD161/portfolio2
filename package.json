@@ -6,7 +6,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "animejs": "^3.2.0",
-    "aos": "^3.0.0-beta.6",
     "babel-plugin-styled-components": "^1.10.7",
     "framer-motion": "^1.11.0",
     "gatsby": "^2.23.3",
@@ -16,6 +15,7 @@
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.3.4",
+    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-plugin-transitions": "^2.1.6",

@@ -15,7 +15,7 @@ $large-monitor: 1400px;
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 25px;
   height: 20px;
   left: 36px;
@@ -63,7 +63,6 @@ $large-monitor: 1400px;
   background: $primary-dark;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  box-shadow: 3px 5px 10px 2px $black;
   display: flex;
   flex-direction: column;
   justify-content: center;

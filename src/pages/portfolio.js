@@ -32,16 +32,16 @@ const PageTitle = styled.h1`
   font-weight: 400;
 `
 
-const GithubLink = styled.a`
+const ViewMoreLink = styled.a`
   display: flex;
   justify-content: center;
   align-self: center;
   grid-column: 7 / 11;
   grid-row: 3;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #eeeeee;
   &:hover {
-    color: #d84358;
+    color: #ff8a00;
   }
   @media screen and (max-width: 768px) {
     grid-column: 6 / 12;
@@ -50,11 +50,11 @@ const GithubLink = styled.a`
 
 const TopShape = styled.div`
   position: absolute;
-  top: 25%;
+  top: 100%;
   width: 100%;
   height: 100%;
   transform: skewY(-8deg);
-  background-color: #262525;
+  background-color: #181b33;
   z-index: -1;
   @media screen and (max-width: 768px) {
     top: 18%;
@@ -65,11 +65,11 @@ const TopShape = styled.div`
 
 const BottomShape = styled.div`
   position: absolute;
-  top: 235%;
+  top: 260%;
   width: 100%;
   height: 100%;
   transform: skewY(8deg);
-  background-color: #262525;
+  background-color: #181b33;
   z-index: -1;
   @media screen and (max-width: 768px) {
     top: 105%;
@@ -86,12 +86,12 @@ export default function portfolio() {
       <PortfolioWrapper>
         <PageNumber>
           02
-          <PageTitle>portfolio</PageTitle>
+          <div>
+            <PageTitle>portfolio</PageTitle>
+          </div>
         </PageNumber>
         <Mockup />
-        <GithubLink href="https://github.com/DRD161">
-          See more on Github
-        </GithubLink>
+        <ViewMoreLink href="https://github.com/DRD161">View more</ViewMoreLink>
       </PortfolioWrapper>
       <BottomShape />
     </Layout>

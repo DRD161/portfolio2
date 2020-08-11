@@ -10,7 +10,7 @@ const Icon = styled.a`
   &:nth-child(3) {
     margin-right: 0;
   }
-  &:hover {
+     &:hover {
     color: #ff8a00;
   }
 `

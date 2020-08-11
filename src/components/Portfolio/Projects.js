@@ -37,7 +37,7 @@ const ProjectRight = styled.div`
 const ProjectTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  grid-column: 8 / 12;
   @media screen and (max-width: 768px) {
     width: 75%;
   }
@@ -46,7 +46,7 @@ const ProjectTextWrapper = styled.div`
 const ProjectHeader = styled.h1`
   color: #eeeeee;
   font-size: 3rem;
-  text-decoration: underline #d84358;
+  text-decoration: underline 1.5px #ff8a00;
   display: flex;
 `
 
@@ -62,20 +62,28 @@ const Tools = styled.p`
   margin-top: -3%;
 `
 
-const StyledImg = styled(Img)`
+const StyledImgLeft = styled(Img)`
   width: 100%;
+  grid-column: 1 / 8;
+  left: -22%;
 `
 
-const SkillsIconsWrapper = styled.div`
+const StyledImgRight = styled(Img)`
+  width: 100%;
+  grid-column: 1 / 8;
+  right: -10%;
+`
+
+const ProjectIconsWrapper = styled.div`
   display: flex;
 `
 
-const SkillsIcon = styled.a`
+const ProjectIcon = styled.a`
   color: #eeeeee;
   font-size: 1.7rem;
   margin-top: -3%;
   &:hover {
-    color: #d84358;
+    color: #ff8a00;
   }
 `
 
@@ -83,13 +91,6 @@ const SkillsIcon = styled.a`
 export default function Projects() {
   const data = useStaticQuery(graphql`
     query {
-      vewsMockup: file(relativePath: { eq: "vews-mockup.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
       cryptoMockup: file(relativePath: { eq: "crypto-mockup.png" }) {
         childImageSharp {
           fluid {
@@ -97,7 +98,7 @@ export default function Projects() {
           }
         }
       }
-      tipMockup: file(relativePath: { eq: "tip-mockup.png" }) {
+      vewsMockup: file(relativePath: { eq: "vews-mockup.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_noBase64
@@ -111,14 +112,14 @@ export default function Projects() {
           }
         }
       }
-      pongMockup: file(relativePath: { eq: "pong-mockup.png" }) {
+      tipMockup: file(relativePath: { eq: "tip-mockup.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      galleryMockup: file(relativePath: { eq: "gallery-mockup.png" }) {
+      pongMockup: file(relativePath: { eq: "pong-mockup.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_noBase64
@@ -131,26 +132,7 @@ export default function Projects() {
   return (
     <ProjectsWrapper>
       <ProjectLeft>
-        <StyledImg fluid={data.vewsMockup.childImageSharp.fluid} />
-        <ProjectTextWrapper>
-          <ProjectHeader>Vews</ProjectHeader>
-          <ProjectText>
-            News app displaying latest news headlines from over 80 news sources
-            using data from the News API.
-          </ProjectText>
-          <Tools>Vue.js / ES6 / Vuetify & Material Design</Tools>
-          <SkillsIconsWrapper>
-            <SkillsIcon href="https://vnews.netlify.com/">
-              <AiOutlineLink />
-            </SkillsIcon>
-            <SkillsIcon href="https://github.com/DRD161/vews">
-              <DiGithubAlt />
-            </SkillsIcon>
-          </SkillsIconsWrapper>
-        </ProjectTextWrapper>
-      </ProjectLeft>
-      <ProjectRight>
-        <StyledImg fluid={data.cryptoMockup.childImageSharp.fluid} />
+        <StyledImgLeft fluid={data.cryptoMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Crypto Graph</ProjectHeader>
           <ProjectText>
@@ -158,37 +140,37 @@ export default function Projects() {
             for cryptocurrencies.
           </ProjectText>
           <Tools>React.js / ES6 / Bootstrap 4 / Chart.js</Tools>
-          <SkillsIconsWrapper>
-            <SkillsIcon href="https://crypto-graph.netlify.com/">
+          <ProjectIconsWrapper>
+            <ProjectIcon href="https://crypto-graph.netlify.com/">
               <AiOutlineLink />
-            </SkillsIcon>
-            <SkillsIcon href="https://github.com/DRD161/crypto-graph">
+            </ProjectIcon>
+            <ProjectIcon href="https://github.com/DRD161/crypto-graph">
               <DiGithubAlt />
-            </SkillsIcon>
-          </SkillsIconsWrapper>
-        </ProjectTextWrapper>
-      </ProjectRight>
-      <ProjectLeft>
-        <StyledImg fluid={data.tipMockup.childImageSharp.fluid} />
-        <ProjectTextWrapper>
-          <ProjectHeader>Tip Calculator</ProjectHeader>
-          <ProjectText>
-            A tip calculator I made to make sure I tip properly. Nobody wants to
-            be the guy who doesn’t tip well!
-          </ProjectText>
-          <Tools>Vue.js / ES6 / Bootstrap 4</Tools>
-          <SkillsIconsWrapper>
-            <SkillsIcon href="https://vue-tip.netlify.com/">
-              <AiOutlineLink />
-            </SkillsIcon>
-            <SkillsIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
-              <DiGithubAlt />
-            </SkillsIcon>
-          </SkillsIconsWrapper>
+            </ProjectIcon>
+          </ProjectIconsWrapper>
         </ProjectTextWrapper>
       </ProjectLeft>
       <ProjectRight>
-        <StyledImg fluid={data.ecommerceMockup.childImageSharp.fluid} />
+        <StyledImgRight fluid={data.vewsMockup.childImageSharp.fluid} />
+        <ProjectTextWrapper>
+          <ProjectHeader>Vews</ProjectHeader>
+          <ProjectText>
+            News app displaying latest news headlines from over 80 news sources
+            using data from the News API.
+          </ProjectText>
+          <Tools>Vue.js / ES6 / Vuetify & Material Design</Tools>
+          <ProjectIconsWrapper>
+            <ProjectIcon href="https://vnews.netlify.com/">
+              <AiOutlineLink />
+            </ProjectIcon>
+            <ProjectIcon href="https://github.com/DRD161/vews">
+              <DiGithubAlt />
+            </ProjectIcon>
+          </ProjectIconsWrapper>
+        </ProjectTextWrapper>
+      </ProjectRight>
+      <ProjectLeft>
+        <StyledImgLeft fluid={data.ecommerceMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>E-commerce Store</ProjectHeader>
           <ProjectText>
@@ -196,32 +178,51 @@ export default function Projects() {
             community.
           </ProjectText>
           <Tools>Shopify / Ruby / Liquid</Tools>
-          <SkillsIconsWrapper>
-            <SkillsIcon href="https://vue-tip.netlify.com/">
+          <ProjectIconsWrapper>
+            <ProjectIcon href="https://vue-tip.netlify.com/">
               <AiOutlineLink />
-            </SkillsIcon>
-            <SkillsIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
+            </ProjectIcon>
+            <ProjectIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
               <DiGithubAlt />
-            </SkillsIcon>
-          </SkillsIconsWrapper>
+            </ProjectIcon>
+          </ProjectIconsWrapper>
+        </ProjectTextWrapper>
+      </ProjectLeft>
+      <ProjectRight>
+        <StyledImgRight fluid={data.tipMockup.childImageSharp.fluid} />
+        <ProjectTextWrapper>
+          <ProjectHeader>Tip Calculator</ProjectHeader>
+          <ProjectText>
+            A tip calculator I made to make sure I tip properly. Nobody wants to
+            be the guy who doesn’t tip well!
+          </ProjectText>
+          <Tools>Vue.js / ES6 / Bootstrap 4</Tools>
+          <ProjectIconsWrapper>
+            <ProjectIcon href="https://vue-tip.netlify.com/">
+              <AiOutlineLink />
+            </ProjectIcon>
+            <ProjectIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
+              <DiGithubAlt />
+            </ProjectIcon>
+          </ProjectIconsWrapper>
         </ProjectTextWrapper>
       </ProjectRight>
       <ProjectLeft>
-        <StyledImg fluid={data.pongMockup.childImageSharp.fluid} />
+        <StyledImgLeft fluid={data.pongMockup.childImageSharp.fluid} />
         <ProjectTextWrapper>
           <ProjectHeader>Pong Clone</ProjectHeader>
           <ProjectText>
             A Pong clone I made. Because who doesn’t like Pong!?
           </ProjectText>
           <Tools>JavaScript / HTML / Canvas</Tools>
-          <SkillsIconsWrapper>
-            <SkillsIcon href="https://vue-tip.netlify.com/">
+          <ProjectIconsWrapper>
+            <ProjectIcon href="https://vue-tip.netlify.com/">
               <AiOutlineLink />
-            </SkillsIcon>
-            <SkillsIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
+            </ProjectIcon>
+            <ProjectIcon href="https://github.com/DRD161/vue-tip-calculatorV2">
               <DiGithubAlt />
-            </SkillsIcon>
-          </SkillsIconsWrapper>
+            </ProjectIcon>
+          </ProjectIconsWrapper>
         </ProjectTextWrapper>
       </ProjectLeft>
     </ProjectsWrapper>
