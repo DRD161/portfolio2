@@ -70,3 +70,6 @@ yarn-error.log
 
 # notes.md
 notes.md
+
+# Webstorm files
+/.idea/
